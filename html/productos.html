@@ -4,153 +4,200 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/grid.css">
-    <link rel="shortcut icon" href="../img/logonegro.png" type="image/x-icon" alt="Imagen del logo">
+    <link rel="shortcut icon" href="../assets/img/logonegro.png" type="image/x-icon" alt="Imagen del logo">
     <script src="https://kit.fontawesome.com/b2adeb8249.js" crossorigin="anonymous"></script> 
     <title>Productos - L'Ocean</title>
     </head>
     <body>
         <header>
-            <nav class="barra-nav1">
+            <!-- inicio barra de navegación mobile -->
+                <div class="barra-mobile">
+                    <section class="barra-nav-mobile">
+                        <div class="barra-iconos-1">
+                            <input type="checkbox" id="check-menu">
+                            <label for="check-menu">
+                                <img src="../assets/img/menu.svg" alt="Icono de Menu">
+                            </label>
+                        </div>
+                        <a href="../index.html" class="barra-title">L'Ocean</a>   
+                        <img src="../assets/img/user.svg" alt="Icono de Usuario">
+                    </section>
+                </div>
+            <!-- inicio barra de navegación -->   
                 <div class="barra-principal">
-                    <a href="../index.html" class="barra-title">L'Ocean</a>
+                    <a href="./index.html" class="barra-title">L'Ocean</a>
                     <div class="barra-iconos1">
-                        <input type="checkbox" id="check-menu">
-                        <label for="check-menu">
-                            <img src="../img/menu.svg" alt="Icono de Menu">
-                        </label>
-                    </div>
+                            <input type="checkbox" id="check-menu">
+                            <label for="check-menu">
+                                <img src="../assets/img/menu.svg" alt="Icono de Menu">
+                            </label>
+                            <ul class="barra-ul">
+                                <li class="barra-paginas">
+                                    <a class="barra-texto-activo" href="../index.html">Inicio</a>
+                                </li>
+                                <li class="barra-paginas">
+                                    <a class="barra-texto" href="./html/productos.html">Productos</a>
+                                </li>
+                                <li class="barra-paginas">
+                                    <a class="barra-texto" href="./html/sale.html">Sale</a>
+                                </li>
+                                <li class="barra-paginas">
+                                    <a class="barra-texto" href="./html/coleccion.html">Colección</a>
+                                </li>
+                                <li class="barra-paginas">
+                                    <a class="barra-texto" href="./html/nuestra-historia.html">Nuestra historia</a>
+                                </li>
+                            </ul>
+                    </div>       
                     <div class="barra-iconos2">
                         <div class="barra-buscador" >
                             <input class="buscador" name="buscar" type="text" placeholder="Buscar">
-                            <button><img src="../img/glass.svg" alt="Icono de Lupa"></button>
+                            <button><img src="../assets/img/glass.svg" alt="Icono de Lupa"></button>
                         </div>
-                        <img src="../img/heart.svg" alt="Icono de Favorito">
-                        <img src="../img/cart.svg" alt="Icono de Carrito">
-                        <img src="../img/user.svg" alt="Icono de Usuario">
+                            <img src="../assets/img/heart.svg" alt="Icono de Favorito">
+                            <img src="../assets/img/cart.svg" alt="Icono de Carrito">
+                            <img src="../assets/img/user.svg" alt="Icono de Usuario">
                     </div>
                 </div>
-
                 <div class="barra-secundaria">
-                    <ul class="barra-ul">
-                        <li class="barra-paginas">
-                            <a class="barra-texto" href="../index.html">Inicio</a>
-                        </li>
-                        <li class="barra-paginas">
-                            <a class="barra-texto-activo" href="./productos.html">Productos</a>
-                        </li>
-                        <li class="barra-paginas">
-                            <a class="barra-texto" href="./sale.html">Sale</a>
-                        </li>
-                        <li class="barra-paginas">
-                            <a class="barra-texto" href="./coleccion.html">Colección</a>
-                        </li>
-                        <li class="barra-paginas">
-                            <a class="barra-texto" href="./nuestra-historia.html">Nuestra historia</a>
-                        </li>
-                    </ul>
+                        <ul class="barra-ul">
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto-activo" href="../html/productos.html">Productos</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../html/sale.html">Sale</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../html/coleccion.html">Colección</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../html/nuestra-historia.html">Nuestra historia</a>
+                            </li>
+                        </ul>
                 </div>
             </nav>
         </header>
-
+        
         <main>
             <div class="contact">
                 <a href="https://www.whatsapp.com" class="contact-img">
-                    <img  src="../img/whatsapp2.svg" title="Escríbenos" alt="Imagen de Whatsapp">
+                    <img  src="../assets/img/whatsapp2.svg" title="Escríbenos" alt="Imagen de Whatsapp">
                 </a>
             </div>
             <section class="prod-banner">
-                <h1 class="prod-banner-title">Woman</h1>
+                <h2 class="prod-banner-title">Woman</h2>
             </section>
 
             <section class="product">
                 <div class="product-container">
                     <a href="#" class="product-link">
-                        <img class="product-img" src="../img/blusa.webp" alt="Imagen de producto">
+                        <img class="product-img" src="../assets/img/blusa.webp" alt="Imagen de producto">
                         <div class="product-item">
                         <p class="product-name" >Blusa<p>
                         <p class="product-price">$16.499</p>
                         </div>
                     </a>
                     <a href="#" class="product-link">
-                        <img class="product-img" src="../img/jean.jpg" alt="Imagen de producto">
+                        <img class="product-img" src="../assets/img/jean.jpg" alt="Imagen de producto">
                         <div class="product-item">
                             <p class="product-name" >Jean</p>
                             <p class="product-price">$27.899</p>
                         </div>
                     </a>
                     <a href="#" class="product-link">
-                        <img class="product-img" src="../img/camisa.jpeg" alt="Imagen de producto">
+                        <img class="product-img" src="../assets/img/camisa.jpeg" alt="Imagen de producto">
                         <div class="product-item">
                             <p class="product-name" >Camisa</p>
                             <p class="product-price">$21.299</p>
                         </div>
                     </a>
                     <a href="#" class="product-link">
-                        <img class="product-img" src="../img/top.jpg" alt="Imagen de producto">
+                        <img class="product-img" src="../assets/img/top.jpg" alt="Imagen de producto">
                         <div class="product-item">
                             <p class="product-name" >Top</p>
                             <p class="product-price">$15.899</p>
                         </div>
                     </a>
                     <a href="#" class="product-link">
-                        <img class="product-img" src="../img/buzo.jpeg" alt="Imagen de producto">
+                        <img class="product-img" src="../assets/img/buzo.jpeg" alt="Imagen de producto">
                         <div class="product-item">
                             <p class="product-name" >Buzo</p>
                             <p class="product-price">$23.849</p>
                         </div>
                     </a>
                     <a href="#" class="product-link">
-                        <img class="product-img" src="../img/pollera.jpg" alt="Imagen de producto">
+                        <img class="product-img" src="../assets/img/pollera.jpg" alt="Imagen de producto">
                         <div class="product-item">
                             <p class="product-name" >Pollera</p>
                             <p class="product-price">$14.199</p>
                         </div>
                     </a>
                     <a href="#" class="product-link">
-                        <img class="product-img" src="../img/remera.jpg" alt="Imagen de producto">
+                        <img class="product-img" src="../assets/img/remera.jpg" alt="Imagen de producto">
                         <div class="product-item">
                             <p class="product-name" >Remera</p>
                             <p class="product-price">$11.999</p>
                         </div>
                     </a>
                     <a href="#" class="product-link">
-                        <img class="product-img" src="../img/overol.jpg" alt="Imagen de producto">
+                        <img class="product-img" src="../assets/img/overol.jpg" alt="Imagen de producto">
                         <div class="product-item">
                             <p class="product-name" >Overol</p>
                             <p class="product-price">$35.099</p>
                         </div>
                     </a>
                     <a href="#" class="product-link">
-                        <img class="product-img" src="../img/short.webp" alt="Imagen de producto">
+                        <img class="product-img" src="../assets/img/short.webp" alt="Imagen de producto">
                         <div class="product-item">
                             <p class="product-name" >Short</p>
                             <p class="product-price">$14.999</p>
                         </div>
                     </a>
                     <a href="#" class="product-link">
-                        <img class="product-img" src="../img/pantalon.jpg" alt="Imagen de producto">
+                        <img class="product-img" src="../assets/img/pantalon.jpg" alt="Imagen de producto">
                         <div class="product-item">
                             <p class="product-name" >Pantalon</p>
                             <p class="product-price">$30.499</p>
                         </div>
                     </a>
                     <a href="#" class="product-link">
-                        <img class="product-img" src="../img/sweater.jpg" alt="Imagen de producto">
+                        <img class="product-img" src="../assets/img/sweater.jpg" alt="Imagen de producto">
                         <div class="product-item">
                             <p class="product-name" >Sueter</p>
                             <p class="product-price">$24.999</p>
                         </div>
                     </a>
                     <a href="#" class="product-link">
-                        <img class="product-img" src="../img/vestido.jpg" alt="Imagen de producto">
+                        <img class="product-img" src="../assets/img/vestido.jpg" alt="Imagen de producto">
                         <div class="product-item">
                             <p class="product-name" >Vestido</p>
                             <p class="product-price">$29.999</p>
                         </div>
                     </a>
                 </div>
+                <nav aria-label="page-navigation">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">«</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">»</span>
+                        </a>
+                      </li>
+                    </ul>
+                </nav>
             </section>
             
             <section class="newsletter">
@@ -175,23 +222,23 @@
             <section class="footer">
                 <div class="footer-div">
                     <a href="../index.html">
-                        <img class="footer-logo" src="../img/logonegro.png" alt="Logo de L'OCEAN">
+                        <img class="footer-logo" src="../assets/img/logonegro.png" alt="Logo de L'OCEAN">
                     </a>
                 </div>
                 <div class="footer-div2">
                 <p class="footer-name">Nuestras redes</p>
                 <div class="barra-redes">
                     <a href="https://www.gmail.com" class="footer-img" target="_blank">
-                        <img src="../img/gmail.svg" alt="logo de Gmail">
+                        <img src="../assets/img/gmail.svg" alt="logo de Gmail">
                     </a>
                     <a href="https://www.instagram.com" class="footer-img" target="_blank">
-                        <img  src="../img/instagram.svg" alt="Logo de Instagram">
+                        <img  src="../assets/img/instagram.svg" alt="Logo de Instagram">
                     </a>   
                     <a href="https://www.facebook.com" class="footer-img" target="_blank">
-                        <img  src="../img/facebook.svg" alt="Logo de Facebook">
+                        <img  src="../assets/img/facebook.svg" alt="Logo de Facebook">
                     </a>
                     <a href="https://www.whatsapp.com" class="footer-img" target="_blank">
-                        <img  src="../img/whatsapp.svg" alt="Logo de Whatsapp">
+                        <img  src="../assets/img/whatsapp.svg" alt="Logo de Whatsapp">
                     </a>  
                 </div>
                 </div>
@@ -234,5 +281,6 @@
                 <p class="ending-p">© 2024 L'Ocean.  All rights reserved.</p>
             </section>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>

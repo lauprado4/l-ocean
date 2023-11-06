@@ -4,59 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/grid.css">
-    <link rel="shortcut icon" href="../img/logonegro.png" type="image/x-icon" alt="Imagen del logo">
+    <link rel="shortcut icon" href="../assets/img/logonegro.png" type="image/x-icon" alt="Imagen del logo">
     <script src="https://kit.fontawesome.com/b2adeb8249.js" crossorigin="anonymous"></script> 
     <title>Historia - L'Ocean</title>
     </head>
     <body>
         <header>
-            <nav class="barra-nav1">
+            <!-- inicio barra de navegación mobile -->
+                <div class="barra-mobile">
+                    <section class="barra-nav-mobile">
+                        <div class="barra-iconos-1">
+                            <input type="checkbox" id="check-menu">
+                            <label for="check-menu">
+                                <img src="../assets/img/menu.svg" alt="Icono de Menu">
+                            </label>
+                        </div>
+                        <a href="../index.html" class="barra-title">L'Ocean</a>   
+                        <img src="../assets/img/user.svg" alt="Icono de Usuario">
+                    </section>
+                </div>
+            <!-- inicio barra de navegación -->   
                 <div class="barra-principal">
-                    <a href="../index.html" class="barra-title">L'Ocean</a>
+                    <a href="./index.html" class="barra-title">L'Ocean</a>
                     <div class="barra-iconos1">
-                        <input type="checkbox" id="check-menu">
-                        <label for="check-menu">
-                            <img src="../img/menu.svg" alt="Icono de Menu">
-                        </label>
-                    </div>
+                            <input type="checkbox" id="check-menu">
+                            <label for="check-menu">
+                                <img src="../assets/img/menu.svg" alt="Icono de Menu">
+                            </label>
+                            <ul class="barra-ul">
+                                <li class="barra-paginas">
+                                    <a class="barra-texto-activo" href="../index.html">Inicio</a>
+                                </li>
+                                <li class="barra-paginas">
+                                    <a class="barra-texto" href="./html/productos.html">Productos</a>
+                                </li>
+                                <li class="barra-paginas">
+                                    <a class="barra-texto" href="./html/sale.html">Sale</a>
+                                </li>
+                                <li class="barra-paginas">
+                                    <a class="barra-texto" href="./html/coleccion.html">Colección</a>
+                                </li>
+                                <li class="barra-paginas">
+                                    <a class="barra-texto" href="./html/nuestra-historia.html">Nuestra historia</a>
+                                </li>
+                            </ul>
+                    </div>       
                     <div class="barra-iconos2">
                         <div class="barra-buscador" >
                             <input class="buscador" name="buscar" type="text" placeholder="Buscar">
-                            <button><img src="../img/glass.svg" alt="Icono de Lupa"></button>
+                            <button><img src="../assets/img/glass.svg" alt="Icono de Lupa"></button>
                         </div>
-                        <img src="../img/heart.svg" alt="Icono de Favorito">
-                        <img src="../img/cart.svg" alt="Icono de Carrito">
-                        <img src="../img/user.svg" alt="Icono de Usuario">
+                            <img src="../assets/img/heart.svg" alt="Icono de Favorito">
+                            <img src="../assets/img/cart.svg" alt="Icono de Carrito">
+                            <img src="../assets/img/user.svg" alt="Icono de Usuario">
                     </div>
                 </div>
-
                 <div class="barra-secundaria">
-                    <ul class="barra-ul">
-                        <li class="barra-paginas">
-                            <a class="barra-texto" href="../index.html">Inicio</a>
-                        </li>
-                        <li class="barra-paginas">
-                            <a class="barra-texto" href="./productos.html">Productos</a>
-                        </li>
-                        <li class="barra-paginas">
-                            <a class="barra-texto" href="./sale.html">Sale</a>
-                        </li>
-                        <li class="barra-paginas">
-                            <a class="barra-texto" href="./coleccion.html">Colección</a>
-                        </li>
-                        <li class="barra-paginas">
-                            <a class="barra-texto-activo" href="./nuestra-historia.html">Nuestra historia</a>
-                        </li>
-                    </ul>
+                        <ul class="barra-ul">
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../html/productos.html">Productos</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../html/sale.html">Sale</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../html/coleccion.html">Colección</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto-activo" href="../html/nuestra-historia.html">Nuestra historia</a>
+                            </li>
+                        </ul>
                 </div>
             </nav>
-            <div class="contact">
-                <a href="https://www.whatsapp.com" class="contact-img">
-                    <img  src="../img/whatsapp2.svg" title="Escríbenos" alt="Imagen de Whatsapp">
-                </a>
-            </div>
         </header>
 
         <main>
@@ -66,26 +91,49 @@
                     </h2>
             </section>
             <section class="historia">
-                <div class="historia-container">L'Ocean ipsum dolor sit amet consectetur adipisicing elit. Neque esse beatae ratione possimus tempore dignissimos quae ut voluptatem, id maxime voluptates ducimus aliquid, temporibus similique! Minus voluptates ratione, distinctio deleniti incidunt similique tempore qui autem aperiam consequuntur totam modi necessitatibus fuga iste amet, quo delectus nam porro nihil soluta magnam, nesciunt optio! Voluptatibus quam quidem labore perferendis perspiciatis tempora necessitatibus ex ducimus fugiat, expedita minus tenetur nisi provident optio animi, natus tempore. Tempora dignissimos dolor animi facilis facere repellat obcaecati quam iure exercitationem, eos libero fugit amet sunt illo voluptatum quia ex ducimus aspernatur sequi cum illum debitis aliquam aliquid. Vel laudantium, quia necessitatibus beatae atque odit at, quidem aut vero mollitia temporibus cumque excepturi minus labore laboriosam modi ipsam suscipit. Doloribus provident ipsum aliquid non natus, temporibus doloremque molestiae nihil reiciendis fugit cupiditate, facere explicabo qui corporis deserunt rerum fugiat ipsam autem modi eligendi iusto excepturi quaerat quidem incidunt. Aliquam at necessitatibus eveniet porro quos obcaecati incidunt ducimus quis. Sit iusto ex vero, ullam illo ducimus odit obcaecati laboriosam quia a consequatur eius, temporibus excepturi sed iste praesentium reiciendis nemo aspernatur fugit dignissimos tempora voluptas laudantium! Error, quae. Perspiciatis, dolorum molestiae qui quisquam atque veniam, blanditiis illum tempore labore ratione quod ab obcaecati! Mollitia exercitationem esse reprehenderit sunt nesciunt voluptatum aliquid magnam incidunt ea, impedit consectetur vel inventore voluptatibus labore aut quia numquam amet. Iusto explicabo ab numquam corrupti nulla facilis, dolorum exercitationem, labore maiores in, velit a eligendi? Iste molestiae tenetur laboriosam ea necessitatibus quo ex commodi accusantium vero.
+                <div class="historia-container">
+                    <p>
+                        Bienvenidos a L'Ocean: Donde la Naturaleza y la Elegancia se Unen
+
+                        En el corazón de la belleza del océano y la serenidad de la playa, nace L'Ocean, una marca de ropa de playa que encarna la pasión por el mar, la arena dorada y el cálido abrazo del sol. L'Ocean no es solo una marca de moda, es una expresión de amor por la naturaleza y un compromiso inquebrantable con la sostenibilidad.
+                    </p>
+                    <p>
+                        Diseñada por la talentosa artista y diseñadora de autor, Lucia Ratero, cada prenda de L'Ocean es una obra maestra artesanal que refleja su profundo respeto por el medio ambiente y su deseo de preservar la belleza de nuestros océanos y playas. Cada diseño de Lucia es una oda a la elegancia, la comodidad y la autenticidad.
+                    </p>
+                    <p>
+                        En L'Ocean, creemos en la belleza de la simplicidad y en la importancia de vivir en armonía con la naturaleza. Es por eso que utilizamos exclusivamente telas naturales y recicladas en la confección de nuestras prendas, minimizando nuestro impacto ambiental y maximizando la comodidad de nuestros clientes. Cada prenda es una declaración de estilo y compromiso con un mundo más limpio y saludable.
+                    </p>
+                    
+                    
+                     
                 </div>
                 <div class="historia-img">
-                    <img class="h-i-1" src="../img/moda.jpg" alt="">
-                    <img class="h-i-2" src="../img/moda2.jpg" alt="">
-                    <img class="h-i-3" src="../img/costa.jpg" alt="">
+                    <img class="h-i-1" src="../assets/img/moda.jpg" alt="">
+                    <img class="h-i-2" src="../assets/img/moda2.jpg" alt="">
+                    <img class="h-i-3" src="../assets/img/costa.jpg" alt="">
                 </div>
                 <div class="historia-parrafo-img">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A eveniet laboriosam debitis nulla doloribus possimus aliquam molestiae ratione, delectus dicta quia eaque, ipsum, placeat mollitia exercitationem reiciendis dolores totam quis amet ducimus expedita numquam. Quam culpa sapiente, reprehenderit deleniti ipsam quia quaerat soluta totam tenetur necessitatibus commodi iure ad eveniet assumenda alias dolorem minima eligendi! Odit ad repellat reiciendis praesentium.</p>
+                    <p>
+                        Nuestros productos son más que ropa de playa; son tesoros únicos hechos a mano con una atención meticulosa a los detalles y un profundo aprecio por la calidad. En L'Ocean, creemos en la durabilidad y en la inversión en piezas que perduran a lo largo del tiempo, tanto en su estilo como en su ética.
+                    </p>
+                    <p>
+                        Únete a nosotros en nuestro viaje hacia un mundo más sostenible, donde la moda y la conciencia medioambiental se fusionan en perfecta armonía. En L'Ocean, no solo te ofrecemos ropa de playa excepcional, te ofrecemos un compromiso con el planeta y un estilo de vida que celebra la belleza natural que nos rodea.
+                    </p>
+                        
+                    <p>
+                        Descubre la elegancia de la naturaleza en cada prenda que creamos. Únete a la brisa del océano, únete a L'Ocean.
+                    </p>
                 </div>
                 <div class="historia-img2">
-                <img class="h-i-4" src="../img/logocrema.png" alt="Imagen de Logo crema">
-                <img class="h-i-5" src="../img/paleta.jpg" alt="Imagen de paleta de colores">
+                <img class="h-i-4" src="../assets/img/logocrema.png" alt="Imagen de Logo crema">
+                <img class="h-i-5" src="../assets/img/paleta.jpg" alt="Imagen de paleta de colores">
                 </div>
             </section>
 
             <section class="newsletter">
                 <div class="newsletter-div">
                     <h2 class="newsletter-title">Newsletter</h2>
-                    <p class="newsletter-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptate dolor dolores ipsum reprehenderit consectetur quis repellat ducimus nulla labore consequuntur iusto ea iste blanditiis earum praesentium commodi, dolorum nihil</p>
+                    <p class="newsletter-parrafo">Suscribete a nuestro newsletter para no perderte de las mejores ofertas, promociones y beneficios exclusivos.</p>
                     <form class="newsletter-form" >
                             <div class="newsletter-subscribe">
                                 <input type="text" class="form-label" id="nombre" name="form-name" placeholder="Nombre completo">
@@ -94,7 +142,9 @@
                             </div>
                     </form>
                 </div>
-                <iframe class="newsletter-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.1866379995604!2d-73.98196392207475!3d40.77991083208644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25889b2b3a289%3A0x2b9d891a5f395b93!2sSEPHORA!5e0!3m2!1ses!2sar!4v1697048679318!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"  
+                <div class="map-container">
+                    <iframe class="newsletter-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.1866379995604!2d-73.98196392207475!3d40.77991083208644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25889b2b3a289%3A0x2b9d891a5f395b93!2sSEPHORA!5e0!3m2!1ses!2sar!4v1697048679318!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+                </div>
             </section>
         </main>
 
@@ -102,23 +152,23 @@
             <section class="footer">
                 <div class="footer-div">
                     <a href="../index.html">
-                        <img class="footer-logo" src="../img/logonegro.png" alt="Logo de L'OCEAN">
+                        <img class="footer-logo" src="../assets/img/logonegro.png" alt="Logo de L'OCEAN">
                     </a>
                 </div>
                 <div class="footer-div2">
                 <p class="footer-name">Nuestras redes</p>
                 <div class="barra-redes">
                     <a href="https://www.gmail.com" class="footer-img" target="_blank">
-                        <img src="../img/gmail.svg" alt="logo de Gmail">
+                        <img src="../assets/img/gmail.svg" alt="logo de Gmail">
                     </a>
                     <a href="https://www.instagram.com" class="footer-img" target="_blank">
-                        <img  src="../img/instagram.svg" alt="Logo de Instagram">
+                        <img  src="../assets/img/instagram.svg" alt="Logo de Instagram">
                     </a>   
                     <a href="https://www.facebook.com" class="footer-img" target="_blank">
-                        <img  src="../img/facebook.svg" alt="Logo de Facebook">
+                        <img  src="../assets/img/facebook.svg" alt="Logo de Facebook">
                     </a>
                     <a href="https://www.whatsapp.com" class="footer-img" target="_blank">
-                        <img  src="../img/whatsapp.svg" alt="Logo de Whatsapp">
+                        <img  src="../assets/img/whatsapp.svg" alt="Logo de Whatsapp">
                     </a>  
                 </div>
                 </div>
@@ -161,5 +211,6 @@
                 <p class="ending-p">© 2024 L'Ocean.  All rights reserved.</p>
             </section>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
