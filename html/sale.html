@@ -13,20 +13,38 @@
     </head>
     <body>
         <header>
-            <!-- inicio barra de navegación mobile -->
-                <div class="barra-mobile">
-                    <section class="barra-nav-mobile">
-                        <div class="barra-iconos-1">
-                            <input type="checkbox" id="check-menu">
-                            <label for="check-menu">
-                                <img src="../assets/img/menu.svg" alt="Icono de Menu">
-                            </label>
-                        </div>
-                        <a href="../index.html" class="barra-title">L'Ocean</a>   
-                        <img src="../assets/img/user.svg" alt="Icono de Usuario">
-                    </section>
-                </div>
-            <!-- inicio barra de navegación -->   
+            <!-- INICIO BARRA DE NAVEGACION MOBILE -->
+            <div class="barra-mobile">
+                <section class="barra-nav-mobile">
+                    <div class="barra-iconos-1">
+                        <input type="checkbox" id="check-menu">
+                        <label for="check-menu">
+                            <img src="../assets/img/menu.svg" alt="Icono de Menu">
+                        </label>
+                        <ul class="barra-ul">
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../html/productos.html">Productos</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto-activo" href="../html/sale.html">Sale</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../html/coleccion.html">Colección</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../html/nuestra-historia.html">Nuestra historia</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="../index.html" class="barra-title">L'Ocean</a>   
+                    <img src="../assets/img/user.svg" alt="Icono de Usuario">
+                </section>
+            </div>
+
+            <!-- INICIO BARRA DE NAVEGACION DESKTOP -->   
                 <div class="barra-principal">
                     <a href="./index.html" class="barra-title">L'Ocean</a>
                     <div class="barra-iconos1">
@@ -100,74 +118,77 @@
                 </div>
             </section>
 
+            <!-- INICIO PRODUCTOS SALE -->
             <section class="product">
                 <div class="prod-banner2">
                     <h1 class="prod-banner-title2">Destacados</h1>
+    
                 </div>
+                <h3>VESTIDOS</h3>
                 <div class="product-container">
-                    <div>
+                     <div>
                         <a href="#" class="product-link">
-                            <img class="product-img" src="../assets/img/blusa.webp" alt="Imagen de producto">
+                            <img class="product-img" src="../assets/img/vestido.webp" alt="Imagen de producto">
                             <div class="product-box">
-                            <div class="product-item">
-                                <p class="product-name">Blusa<p>
-                                <p class="product-price">$16.499</p>
-                            </div>
-                            <div class="product-action">
-                                <a href="#" class="product-cart">
-                                    <img  src="../assets/img/cart2.svg" title="Agregar al carrito" alt="Icono de Carrito">
-                                </a>
-                                <a href="#" class="product-wishlist">
-                                    <img  src="../assets/img/heart2.svg" title="Agregar a la lista de deseados" alt="Icono de deseados">
-                                </a>
-                            </div>
-                        </div> 
-                        </a>
-                    </div>
-                   <div>
-                        <a href="#" class="product-link">
-                            <img class="product-img" src="../assets/img/jean.jpg" alt="Imagen de producto">
-                            <div class="product-box">
-                            <div class="product-item">
-                                <p class="product-name">Jean</p>
-                                <p class="product-price">$27.899</p>
-                            </div>
-                            <div class="product-action">
-                                <a href="#" class="product-cart">
-                                    <img  src="../assets/img/cart2.svg" title="Agregar al carrito" alt="Icono de Carrito">
-                                </a>
-                                <a href="#" class="product-wishlist">
-                                    <img  src="../assets/img/heart2.svg" title="Agregar a la lista de deseados" alt="Icono de deseados">
-                                </a>
-                            </div>
-                        </div> 
-                        </a>
-                   </div>
-                    <div>
-                        <a href="#" class="product-link">
-                            <img class="product-img" src="../assets/img/camisa.jpeg" alt="Imagen de producto">
-                            <div class="product-box">
-                            <div class="product-item">
-                                <p class="product-name" >Camisa</p>
-                                <p class="product-price">$21.299</p>
-                            </div>
-                            <div class="product-action">
-                                <a href="#" class="product-cart">
-                                    <img  src="../assets/img/cart2.svg" title="Agregar al carrito" alt="Icono de Carrito">
-                                </a>
-                                <a href="#" class="product-wishlist">
-                                    <img  src="../assets/img/heart2.svg" title="Agregar a la lista de deseados" alt="Icono de deseados">
-                                </a>
-                            </div>
-                        </div> 
+                                <div class="product-item">
+                                    <p class="product-name">
+                                    <p class="product-price">$16.499</p>
+                                </div>
+                                <div class="product-action">
+                                    <a href="#" class="product-cart">
+                                        <img  src="../assets/img/cart2.svg" title="Agregar al carrito" alt="Icono de Carrito">
+                                    </a>
+                                    <a href="#" class="product-wishlist">
+                                        <img  src="../assets/img/heart2.svg" title="Agregar a la lista de deseados" alt="Icono de deseados">
+                                    </a>
+                                </div>
+                            </div> 
                         </a>
                     </div>
                     <div>
                         <a href="#" class="product-link">
-                            <img class="product-img" src="../assets/img/top.jpg" alt="Imagen de producto">
+                            <img class="product-img" src="../assets/img/vestido3.jpg" alt="Imagen de producto">
+                            <div class="product-box">
+                                <div class="product-item">
+                                    <p class="product-name"></p>
+                                    <p class="product-price">$27.899</p>
+                                </div>
+                                <div class="product-action">
+                                    <a href="#" class="product-cart">
+                                        <img  src="../assets/img/cart2.svg" title="Agregar al carrito" alt="Icono de Carrito">
+                                    </a>
+                                    <a href="#" class="product-wishlist">
+                                        <img  src="../assets/img/heart2.svg" title="Agregar a la lista de deseados" alt="Icono de deseados">
+                                    </a>
+                                </div>
+                            </div> 
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="product-link">
+                            <img class="product-img" src="../assets/img/vestido4.webp" alt="Imagen de producto">
+                            <div class="product-box">
+                                <div class="product-item">
+                                    <p class="product-name"></p>
+                                    <p class="product-price">$21.299</p>
+                                </div>
+                                <div class="product-action">
+                                    <a href="#" class="product-cart">
+                                        <img  src="../assets/img/cart2.svg" title="Agregar al carrito" alt="Icono de Carrito">
+                                    </a>
+                                <a href="#" class="product-wishlist">
+                                    <img  src="../assets/img/heart2.svg" title="Agregar a la lista de deseados" alt="Icono de deseados">
+                                </a>
+                                </div>
+                            </div> 
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="product-link">
+                            <img class="product-img" src="../assets/img/vestido.jpg" alt="Imagen de producto">
                             <div class="product-box">
                             <div class="product-item">
-                                <p class="product-name" >Top</p>
+                                <p class="product-name"></p>
                                 <p class="product-price">$15.899</p>
                             </div>
                             <div class="product-action">
@@ -181,12 +202,15 @@
                         </div> 
                         </a>
                     </div>
+                </div>
+                <h3>POLLERAS</h3>
+                <div class="product-container">        
                     <div>
                         <a href="#" class="product-link">
-                            <img class="product-img" src="../assets/img/buzo.jpeg" alt="Imagen de producto">
+                            <img class="product-img" src="../assets/img/pollera2.webp" alt="Imagen de producto">
                             <div class="product-box">
                             <div class="product-item">
-                                <p class="product-name" >Buzo</p>
+                                <p class="product-name"></p>
                                 <p class="product-price">$23.849</p>
                             </div>
                             <div class="product-action">
@@ -202,10 +226,10 @@
                     </div>
                     <div>
                         <a href="#" class="product-link">
-                            <img class="product-img" src="../assets/img/pollera.jpg" alt="Imagen de producto">
+                            <img class="product-img" src="../assets/img/pollera3.webp" alt="Imagen de producto">
                             <div class="product-box">
                             <div class="product-item">
-                                <p class="product-name" >Pollera</p>
+                                <p class="product-name"></p>
                                 <p class="product-price">$14.199</p>
                             </div>
                             <div class="product-action">
@@ -221,30 +245,11 @@
                     </div>
                     <div>
                         <a href="#" class="product-link">
-                        <img class="product-img" src="../assets/img/remera.jpg" alt="Imagen de producto">
-                        <div class="product-box">
-                        <div class="product-item">
-                            <p class="product-name" >Remera</p>
-                            <p class="product-price">$11.999</p>
-                        </div>
-                        <div class="product-action">
-                            <a href="#" class="product-cart">
-                                <img  src="../assets/img/cart2.svg" title="Agregar al carrito" alt="Icono de Carrito">
-                            </a>
-                            <a href="#" class="product-wishlist">
-                                <img  src="../assets/img/heart2.svg" title="Agregar a la lista de deseados" alt="Icono de deseados">
-                            </a>
-                        </div>
-                    </div> 
-                    </a>
-                    </div>
-                    <div>
-                        <a href="#" class="product-link">
-                            <img class="product-img" src="../assets/img/overol.jpg" alt="Imagen de producto">
-                            <div class="product-box"> 
+                            <img class="product-img" src="../assets/img/pollera4.jpg" alt="Imagen de producto">
+                            <div class="product-box">
                                 <div class="product-item">
-                                    <p class="product-name" >Overol</p>
-                                    <p class="product-price">$35.099</p>
+                                    <p class="product-name"></p>
+                                    <p class="product-price">$11.999</p>
                                 </div>
                                 <div class="product-action">
                                     <a href="#" class="product-cart">
@@ -259,10 +264,32 @@
                     </div>
                     <div>
                         <a href="#" class="product-link">
-                            <img class="product-img" src="../assets/img/short.webp" alt="Imagen de producto">
+                            <img class="product-img" src="../assets/img/pollera5.webp" alt="Imagen de producto">
+                            <div class="product-box"> 
+                                <div class="product-item">
+                                    <p class="product-name"></p>
+                                    <p class="product-price">$35.099</p>
+                                </div>
+                                <div class="product-action">
+                                    <a href="#" class="product-cart">
+                                        <img  src="../assets/img/cart2.svg" title="Agregar al carrito" alt="Icono de Carrito">
+                                    </a>
+                                    <a href="#" class="product-wishlist">
+                                        <img  src="../assets/img/heart2.svg" title="Agregar a la lista de deseados" alt="Icono de deseados">
+                                    </a>
+                                </div>
+                            </div> 
+                        </a>
+                    </div>
+                </div>
+                <h3>PARTES DE ARRIBA</h3>
+                <div class="product-container">    
+                    <div>
+                        <a href="#" class="product-link">
+                            <img class="product-img" src="../assets/img/arriba.jpg" alt="Imagen de producto">
                             <div class="product-box"> 
                             <div class="product-item">
-                                    <p class="product-name" >Short</p>
+                                    <p class="product-name"></p>
                                     <p class="product-price">$14.999</p>
                                 </div>
                                 <div class="product-action">
@@ -279,10 +306,10 @@
                     
                     <div>
                         <a href="#" class="product-link">
-                            <img class="product-img" src="../assets/img/pantalon.jpg" alt="Imagen de producto">
+                            <img class="product-img" src="../assets/img/arriba2.jpg" alt="Imagen de producto">
                             <div class="product-box">
                                 <div class="product-item">
-                                    <p class="product-name" >Pantalon</p>
+                                    <p class="product-name"></p>
                                     <p class="product-price">$30.499</p>
                                 </div>
                                 <div class="product-action">
@@ -299,10 +326,10 @@
                     
                     <div>
                         <a href="#" class="product-link">
-                            <img class="product-img" src="../assets/img/sweater.jpg" alt="Imagen de producto">
+                            <img class="product-img" src="../assets/img/arriba3.jpg" alt="Imagen de producto">
                             <div class="product-box">
                                 <div class="product-item">
-                                    <p class="product-name" >Sueter</>
+                                    <p class="product-name"></p>
                                     <p class="product-price">$24.999</p>
                                 </div>
                                 <div class="product-action">
@@ -319,10 +346,10 @@
                     
                     <div>
                         <a href="#" class="product-link">
-                            <img class="product-img" src="../assets/img/vestido.jpg" alt="Imagen de producto">
+                            <img class="product-img" src="../assets/img/arriba4.jpg" alt="Imagen de producto">
                             <div class="product-box">
                                 <div class="product-item">
-                                    <p class="product-name" >Vestido</p>
+                                    <p class="product-name"></p>
                                     <p class="product-price">$29.999</p>
                                 </div>
                                 <div class="product-action">
@@ -333,12 +360,9 @@
                                         <img  src="../assets/img/heart2.svg" title="Agregar a la lista de deseados" alt="Icono de deseados">
                                     </a>
                                 </div>
-                            </div>
-                            
+                            </div>  
                         </a>
-                        
-                    </div>
-                    
+                    </div> 
                 </div>
             </section>
             
@@ -359,6 +383,7 @@
                 </div>
             </section>
         </main>
+
     <!-- INICIO FOOTER -->
         <footer>
             <section class="footer">
@@ -384,7 +409,6 @@
                     </a>  
                 </div>
                 </div>
-                <div class="footer-div3"></div>
             </section>
 
             <section class="ending">

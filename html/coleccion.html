@@ -13,20 +13,38 @@
     </head>
     <body>
         <header>
-            <!-- inicio barra de navegación mobile -->
-                <div class="barra-mobile">
-                    <section class="barra-nav-mobile">
-                        <div class="barra-iconos-1">
-                            <input type="checkbox" id="check-menu">
-                            <label for="check-menu">
-                                <img src="../assets/img/menu.svg" alt="Icono de Menu">
-                            </label>
-                        </div>
-                        <a href="../index.html" class="barra-title">L'Ocean</a>   
-                        <img src="../assets/img/user.svg" alt="Icono de Usuario">
-                    </section>
-                </div>
-            <!-- inicio barra de navegación -->   
+              <!-- INICIO BARRA DE NAVEGACION MOBILE -->
+              <div class="barra-mobile">
+                <section class="barra-nav-mobile">
+                    <div class="barra-iconos-1">
+                        <input type="checkbox" id="check-menu">
+                        <label for="check-menu">
+                            <img src="../assets/img/menu.svg" alt="Icono de Menu">
+                        </label>
+                        <ul class="barra-ul">
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../html/productos.html">Productos</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../html/sale.html">Sale</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto-activo" href="../html/coleccion.html">Colección</a>
+                            </li>
+                            <li class="barra-paginas">
+                                <a class="barra-texto" href="../html/nuestra-historia.html">Nuestra historia</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="../index.html" class="barra-title">L'Ocean</a>   
+                    <img src="../assets/img/user.svg" alt="Icono de Usuario">
+                </section>
+            </div>
+
+            <!-- INICIO BARRA DE NAVEGACION DESKTOP -->   
                 <div class="barra-principal">
                     <a href="./index.html" class="barra-title">L'Ocean</a>
                     <div class="barra-iconos1">
@@ -90,6 +108,8 @@
                     <img  src="../assets/img/whatsapp2.svg" title="Escríbenos" alt="Imagen de Whatsapp">
                 </a>
             </div>
+
+            <!-- INICIO CARRUSEL -->
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -98,7 +118,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="../assets/img/carrusel3-3.jpg" class="d-flex w-100" alt="Imagen de carrusel 1">
+                        <img src="../assets/img/carrusel1-1.jpg" class="d-flex w-100" alt="Imagen de carrusel 1">
                         <div class="carousel-text">
                             <h2>SEA,</h2>
                         </div>
@@ -110,7 +130,7 @@
                         </div>    
                     </div>
                     <div class="carousel-item">
-                        <img src="../assets/img/carrusel1-1.jpg" class="d-flex w-100" alt="Imagen de carrusel 3">
+                        <img src="../assets/img/carrusel1.jpg" class="d-flex w-100" alt="Imagen de carrusel 3">
                         <div class="carousel-text">
                             <h2>& SUN</h2>
                         </div>
@@ -126,25 +146,28 @@
                 </button>
               </div>
 
+              <!-- INICIO SECCION COLECCION -->
             <section>
                 
             </section>
 
-            <section>
-                <p>Colección Primavera/Verano 2024: "Sea, Sun & Sand" de L'Ocean
-
-                    Sumérgete en la esencia de la playa y la belleza natural con nuestra emocionante colección primavera/verano 2024, "Sea, Sun & Sand," de L'Ocean. Esta colección te transportará a un paraíso costero donde la naturaleza es la protagonista y los sentidos se despiertan con la frescura del mar, la suavidad de la arena y la cálida caricia del sol.
+            <section class="coleccion-container">
+                <p>
+                    Colección Primavera/Verano 2024: "Sea, Sand & Sun" de L'Ocean
+                </p>
+                <p>
+                    Sumérgete en la esencia de la playa y la belleza natural con nuestra emocionante colección primavera/verano 2024, "Sea, Sand & Sun," de L'Ocean. Esta colección te transportará a un paraíso costero donde la naturaleza es la protagonista y los sentidos se despiertan con la frescura del mar, la suavidad de la arena y la cálida caricia del sol.
                     
-                    Inspirada en las texturas y colores de la naturaleza originaria de las playas, "Sea, Sun & Sand" es una oda a la belleza intemporal que rodea nuestras costas. Cada prenda de esta colección ha sido cuidadosamente diseñada para capturar la esencia de la arena dorada, el azul profundo del océano y los tonos cálidos del sol.</p>
+                    Inspirada en las texturas y colores de la naturaleza originaria de las playas, "Sea, Sand & Sun" es una oda a la belleza intemporal que rodea nuestras costas. Cada prenda de esta colección ha sido cuidadosamente diseñada para capturar la esencia de la arena dorada, el azul profundo del océano y los tonos cálidos del sol.</p>
                 <p>
                     Los tejidos que conforman esta colección son suaves y livianos, como la brisa marina, y están adornados con estampados y patrones que evocan la riqueza de la flora y fauna costera. Desde la frescura de las hojas verdes hasta la elegancia de las conchas marinas, cada prenda es una obra de arte que celebra la diversidad y la vida que se encuentra en la costa.
                 </p>
                 <p>
-                    "Sea, Sun & Sand" de L'Ocean es más que una colección de moda; es una invitación a abrazar la belleza natural que nos rodea. Cada pieza ha sido creada con amor y atención al detalle, para que puedas llevar contigo un pedazo de paraíso en cada ocasión.
+                    "Sea, Sand & Sun" de L'Ocean es más que una colección de moda; es una invitación a abrazar la belleza natural que nos rodea. Cada pieza ha sido creada con amor y atención al detalle, para que puedas llevar contigo un pedazo de paraíso en cada ocasión.
                 <p>
-                    Únete a nosotros en este viaje hacia la playa, donde la moda se encuentra con la naturaleza en perfecta armonía. Descubre la colección primavera/verano 2024 de L'Ocean y vístete con la esencia de "Sean, Sun & Sand."
+                    Únete a nosotros en este viaje hacia la playa, donde la moda se encuentra con la naturaleza en perfecta armonía. Descubre la colección primavera/verano 2024 de L'Ocean y vístete con la esencia de "Sean, Sand & Sun."
 
-                    Déjate llevar por la brisa del mar y sumérgete en la magia de la playa con "Sea, Sun & Sand" de L'Ocean.    
+                    Déjate llevar por la brisa del mar y sumérgete en la magia de la playa con "Sea, Sand & Sun" de L'Ocean.    
                 </p>
 
                 </p>
@@ -193,7 +216,6 @@
                     </a>  
                 </div>
                 </div>
-                <div class="footer-div3"></div>
             </section>
 
             <section class="ending">
