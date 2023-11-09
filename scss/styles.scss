@@ -1,0 +1,240 @@
+
+// RESET //
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// BARRA MOBILE//
+.barra-mobile{
+    font-family: 'Poiret One', cursive;
+    background: linear-gradient(-75deg, #3b4b51, #efd7c7);
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 20;
+    align-items: center;
+
+    .barra-nav-mobile{
+        display: none;
+
+        .barra-iconos-1{
+
+
+            #check-menu{
+                display: none;
+            }
+
+            .barra-ul{
+                font-family: 'Poiret One', cursive;
+                display:flex;
+                justify-content: space-evenly;
+                align-items: center;
+                font-size: 1.5rem;
+                font-weight: bold;
+                height: 3.4rem;
+                width: 80%;
+                margin-top: 5rem;
+                position: fixed;
+                top: 0;
+
+                .barra-paginas{
+                    list-style: none;
+
+                    .barra-texto{
+                        text-decoration: none;
+                        color: black;
+                        font-weight:lighter;
+                    }
+                    .barra-texto-activo{
+                        border-bottom: #7a7a7a 1px solid;
+                        text-decoration: none;
+                        color: black;
+                        font-weight:lighter
+                    }
+                }
+            }
+        }
+
+        .barra-title{
+            font-family: 'Ahsing';
+            margin-left: 2rem; 
+            color: rgb(255, 255, 255);
+            opacity: 1;
+            font-size: 2rem;
+            height: 4rem;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+
+        }
+    }
+}
+
+// BARRA PRINCIPAL//
+.barra-principal{
+    font-family: 'Poiret One', cursive;
+    background: linear-gradient(-75deg, #3b4b51, #efd7c7);
+    width: 100%;
+    display: flex; flex-direction: row;
+    justify-content: space-between;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 20;
+    align-items: center;
+
+    .barra-title{
+        font-family: 'Ahsing';
+        margin-left: 2rem; 
+        color: rgb(255, 255, 255);
+        opacity: 1;
+        font-size: 2rem;
+        height: 4rem;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .barra-iconos1{
+        display: flex;
+        gap: 1rem;
+        margin-right: 2rem;
+        
+        #check-menu{
+            display: none;
+        }
+        .barra-ul{
+            font-family: 'Poiret One', cursive;
+            display:flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            height: 3.4rem;
+            width: 80%;
+            margin-top: 5rem;
+            position: fixed;
+            top: 0;
+
+            .barra-paginas{
+                list-style: none;
+
+                .barra-texto{
+                    text-decoration: none;
+                    color: black;
+                    font-weight:lighter;
+                }
+                .barra-texto-activo{
+                    border-bottom: #7a7a7a 1px solid;
+                    text-decoration: none;
+                    color: black;
+                    font-weight:lighter
+                }
+            }
+        }
+    }
+    .barra-iconos2{
+        display: flex;
+        gap: 1rem;
+        margin-right: 2rem;
+        
+        .barra-buscador{
+            display: flex; 
+
+            .buscador{
+                border-radius: 20px 0 0 20px;
+                height: 3rem;
+                border-color: white;
+                padding: 10px;
+                background-color: #3b4b51;
+                font-family: 'Poiret One', cursive;
+                font-size: 1.2rem;
+                font-weight:bold;
+                color: white;
+            }
+            button{
+                border-color: white;
+                border-radius: 0 20px 20px 0;
+                height: 3rem;
+                width: 50px;
+                padding: 2px;
+                background-color: #3b4b51;
+                
+                &hover{}
+            }
+        }
+        img{
+            font-size: 5rem;
+            height: 2.5rem;
+        }
+    }
+}
+
+// BARRA SECUNDARIA//
+.barra-secundaria{
+    font-family: 'Poiret One', cursive;
+    background-color: rgb(255, 255, 255);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 3.4rem;
+    width: 100%;
+    margin-top: 5rem;
+    position: fixed;
+    top: 0;
+    left:0;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+    z-index: 20;
+}
+//BANNER//
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height:97vh;   
+    overflow: hidden;
+
+    .banner-title{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 8rem;
+        font-family: 'Kristi', cursive;
+        font-weight: lighter;
+        color: white;
+        position: relative;
+        z-index: 5;
+        text-shadow: 5px 5px #a1aba1;
+        p{}
+    }
+    .bg-video{
+        width: 100%;
+        height: 97vh;
+        z-index: -80;
+        position: absolute;
+        top: -5;
+        left: 0;
+        object-fit: cover;
+    }
+    .capa{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        opacity: 0.2;
+    }
+}
