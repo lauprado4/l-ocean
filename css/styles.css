@@ -1,7 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Kristi&family=Oooh+Baby&family=Poiret+One&display=swap");
+@font-face {
+  font-family: "Ahsing";
+  src: url(../font/Ahsing-Regular.otf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.p {
+  margin: 0;
+}
+
+.body {
+  font-family: "Oooh Baby", cursive;
+  font-family: "Poiret One", cursive;
+  font-family: "Kristi", cursive;
+  margin: 0;
 }
 
 .barra-mobile {
@@ -18,8 +34,10 @@
 .barra-mobile .barra-nav-mobile {
   display: none;
 }
-.barra-mobile .barra-nav-mobile .barra-iconos-1 #check-menu {
-  display: none;
+.barra-mobile .barra-nav-mobile .barra-iconos-1 {
+  display: flex;
+  gap: 1rem;
+  margin-right: 2rem;
 }
 .barra-mobile .barra-nav-mobile .barra-iconos-1 .barra-ul {
   font-family: "Poiret One", cursive;
@@ -37,7 +55,7 @@
 .barra-mobile .barra-nav-mobile .barra-iconos-1 .barra-ul .barra-paginas {
   list-style: none;
 }
-.barra-mobile .barra-nav-mobile .barra-iconos-1 .barra-ul .barra-paginas .barra-texto {
+.barra-mobile .barra-nav-mobile .barra-iconos-1 .barra-ul .barra-paginas .barra-texto, .barra-mobile .barra-nav-mobile .barra-iconos-1 .barra-secundaria .barra-ul .barra-paginas .barra-texto-activo, .barra-secundaria .barra-mobile .barra-nav-mobile .barra-iconos-1 .barra-ul .barra-paginas .barra-texto-activo {
   text-decoration: none;
   color: black;
   font-weight: lighter;
@@ -60,6 +78,17 @@
   justify-content: center;
   align-items: center;
 }
+
+.barra-nav {
+  height: 85vh;
+  width: 100%;
+  position: relative;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .barra-principal {
   font-family: "Poiret One", cursive;
   background: linear-gradient(-75deg, #3b4b51, #efd7c7);
@@ -94,6 +123,9 @@
 .barra-principal .barra-iconos1 #check-menu {
   display: none;
 }
+.barra-principal .barra-iconos1 label {
+  display: none;
+}
 .barra-principal .barra-iconos1 .barra-ul {
   font-family: "Poiret One", cursive;
   display: flex;
@@ -110,7 +142,7 @@
 .barra-principal .barra-iconos1 .barra-ul .barra-paginas {
   list-style: none;
 }
-.barra-principal .barra-iconos1 .barra-ul .barra-paginas .barra-texto {
+.barra-principal .barra-iconos1 .barra-ul .barra-paginas .barra-texto, .barra-principal .barra-iconos1 .barra-secundaria .barra-ul .barra-paginas .barra-texto-activo, .barra-secundaria .barra-principal .barra-iconos1 .barra-ul .barra-paginas .barra-texto-activo {
   text-decoration: none;
   color: black;
   font-weight: lighter;
@@ -148,6 +180,9 @@
   padding: 2px;
   background-color: #3b4b51;
 }
+.barra-principal .barra-iconos2 .barra-buscador button:hover {
+  background-color: #516268;
+}
 .barra-principal .barra-iconos2 img {
   font-size: 5rem;
   height: 2.5rem;
@@ -169,6 +204,30 @@
   left: 0;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
   z-index: 20;
+}
+.barra-secundaria .barra-ul {
+  font-family: "Poiret One", cursive;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 3.4rem;
+  width: 80%;
+  margin-top: 5rem;
+  position: fixed;
+  top: 0;
+}
+.barra-secundaria .barra-ul .barra-paginas {
+  list-style: none;
+}
+.barra-secundaria .barra-ul .barra-paginas .barra-texto, .barra-secundaria .barra-ul .barra-paginas .barra-texto-activo {
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+}
+.barra-secundaria .barra-ul .barra-paginas .barra-texto-activo {
+  border-bottom: #7a7a7a 1px solid;
 }
 
 .banner {
@@ -209,6 +268,471 @@
   width: 100%;
   background-color: rgb(0, 0, 0);
   opacity: 0.2;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+  margin: 1.5rem;
+}
+.contact:hover {
+  background-color: rgba(81, 98, 104, 0.137254902);
+  color: white;
+  z-index: 10;
+}
+.contact:hover::after {
+  top: 0;
+}
+.contact .contact-img {
+  position: fixed;
+  width: 7rem;
+  height: 7rem;
+  background-color: #25D366;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 10;
+  padding: 0 10px;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.5s;
+  overflow: hidden;
+  color: white;
+  font-size: 2rem;
+  line-height: 4.2rem;
+}
+.contact .contact-img:hover {
+  transform: translateY(-10px);
+}
+.contact .contact-img:hover .footer-img {
+  color: white;
+}
+.contact .contact-img img {
+  width: 110px;
+  height: 110px;
+  padding: 8px 15px 8px 0;
+  color: black;
+  position: relative;
+  z-index: 10;
+  transition: color 0.5s;
+}
+
+.temporada {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  font-family: "Poiret One", cursive;
+}
+.temporada .temporada-title {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.temporada .temporada-parrafo {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-bottom: 1rem;
+  width: auto;
+  max-width: 95%;
+}
+.temporada .temporada-fotos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.temporada .temporada-fotos .temporada-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.temporada .temporada-fotos .temporada-container .temporada-img {
+  height: 35rem;
+  cursor: pointer;
+}
+.temporada .temporada-fotos .temporada-container .temporada-img:hover {
+  height: 35rem;
+  background-color: grey;
+  opacity: 0.7;
+  text-shadow: #516268;
+}
+.temporada .temporada-fotos .temporada-container .temporada-img-texto {
+  color: white;
+  display: flex;
+  position: absolute;
+  font-size: 5.5rem;
+  font-family: "Kristi", cursive;
+  text-shadow: 0 0 3px grey;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.temporada .temporada-fotos .temporada-container .temporada-texto {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.newsletter {
+  height: max-content;
+  width: 100%;
+  font-family: "Poiret One", cursive;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid black;
+  padding: 2% 0 1% 0;
+}
+.newsletter .newsletter-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 2%;
+}
+.newsletter .newsletter-div .newsletter-title {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+  align-items: center;
+}
+.newsletter .newsletter-div .newsletter-parrafo {
+  display: flex;
+  width: auto;
+  max-width: 90%;
+  margin-bottom: 0.5;
+  font-size: 1.3rem;
+}
+.newsletter .newsletter-div .newsletter-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newsletter .newsletter-div .newsletter-subscribe .form-label {
+  background-color: white;
+  margin: 0.8rem;
+  border-radius: 5px;
+  border-top: #a1aba1;
+  border-left: #a1aba1;
+  height: 2rem;
+  width: 20vw;
+  min-width: fit-content;
+  font-family: "Poiret One", cursive;
+  font-weight: bolder;
+  padding-left: 2%;
+}
+.newsletter .newsletter-div .newsletter-subscribe .form-submit {
+  background-color: #a1aba1;
+  margin: 10px;
+  width: 6vw;
+  min-width: fit-content;
+  height: 2rem;
+  border-radius: 5px;
+  color: white;
+  border-color: #a1aba1;
+  font-family: "Poiret One", cursive;
+  font-weight: bolder;
+}
+.newsletter .newsletter-div .newsletter-subscribe .form-submit:hover {
+  background-color: #516268;
+}
+.newsletter .map-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 2% 0 4% 0;
+}
+.newsletter .map-container .newsletter-map {
+  width: 95%;
+  height: 20vh;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.footer {
+  background-color: #ebebeb;
+  height: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer .footer-div .footer-logo {
+  width: 9.7rem;
+  height: 9.7rem;
+}
+.footer .footer-div2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer .footer-div2 .footer-name {
+  display: flex;
+  font-family: "Poiret One", cursive;
+  font-size: 2rem;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+.footer .footer-div2 .barra-redes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer .footer-div2 .barra-redes .footer-img {
+  font-size: 2rem;
+  line-height: 4rem;
+  width: 100%;
+  height: 4.8rem;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+  margin: 0 10px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+.footer .footer-div2 .barra-redes .footer-img:hover::after {
+  top: 0;
+}
+.footer .footer-div2 .barra-redes .footer-img:hover .footer-img {
+  color: white;
+}
+.footer .footer-div2 .barra-redes .footer-img:hover {
+  transform: translateY(-10px);
+}
+.footer .footer-div2 .barra-redes .footer-img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -90px;
+  left: 0;
+  background: linear-gradient(-45deg, #a1aba1, #efd7c7);
+  position: absolute;
+  transition: 0.5s;
+}
+.footer .footer-div2 .barra-redes .footer-img img {
+  width: 4.8rem;
+  height: 4.8rem;
+  padding: 0.6rem;
+  color: black;
+  position: relative;
+  z-index: 5;
+  transition: color 0.5s;
+}
+
+.ending {
+  font-family: "Poiret One", cursive;
+  background-color: #f7f6f6;
+  height: max-content;
+  padding: 1.2rem;
+}
+.ending .ending-barra {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  margin-bottom: 1.2rem;
+  padding: 0;
+}
+.ending .ending-barra .ending-paginas .ending-texto {
+  text-decoration: none;
+  color: black;
+}
+.ending .ending-barra .separador {
+  margin: 0;
+  padding: 0;
+  margin: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ending .ending-parrafo {
+  margin: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MEDIA QUERIES */
+@media (orientation: landscape) and (max-height: 480px) {
+  .barra-principal, .barra-secundaria {
+    display: none;
+  }
+  .barra-nav-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    width: 100vw;
+  }
+  .barra-iconos-1, .barra-nav-mobile img {
+    height: 3rem;
+    margin: 2%;
+  }
+  .barra-title {
+    margin: 0;
+  }
+  .barra-iconos2 {
+    display: none;
+  }
+  .prod-banner {
+    height: 150px;
+    margin-top: 3.4rem;
+  }
+  .banner-container h2 {
+    font-size: 5rem;
+  }
+  .banner-container button {
+    font-size: 1.5rem;
+    height: 2.5rem;
+    width: 8rem;
+  }
+  .product-img {
+    width: 25rem;
+    object-fit: cover;
+  }
+  .product-link {
+    text-decoration: none;
+    height: auto;
+  }
+  .product-wishlist img, .product-cart img {
+    height: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .barra-principal, .barra-secundaria {
+    display: none;
+  }
+  .barra-mobile #check-menu:checked ~ .barra-ul {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 55vh;
+    width: 70vw;
+    left: 0;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.365);
+  }
+  .barra-mobile {
+    display: flex;
+  }
+  .barra-nav-mobile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    width: 100vw;
+  }
+  .barra-nav-mobile img, .barra-iconos-1 {
+    height: 2.5rem;
+  }
+  .barra-title {
+    margin: 0;
+  }
+  .banner-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 8rem;
+  }
+  .temporada-container {
+    width: 100%;
+  }
+  .temporada-img {
+    margin: 5%;
+  }
+  .footer {
+    height: auto;
+  }
+  .footer-img {
+    height: 2rem;
+    line-height: 0;
+  }
+  .footer-div {
+    margin-top: 1.2rem;
+  }
+  .footer-div2 {
+    margin-bottom: 1.2rem;
+  }
+  .barra-redes {
+    gap: 0;
+    max-width: 100vw;
+  }
+  .barra-redes a {
+    height: 3.4rem;
+  }
+  .barra-redes img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+  .ending {
+    padding: 1rem;
+  }
+  .ending-barra {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .newsletter-div {
+    margin-bottom: 1rem;
+  }
+  .prod-banner {
+    height: 150px;
+    margin-top: 3.4rem;
+  }
+  .banner-container h2 {
+    font-size: 8rem;
+  }
+  .product-img {
+    height: 60vh;
+    width: 80vw;
+  }
+  .product-wishlist img {
+    margin: 0.5%;
+  }
+  .carousel-inner {
+    margin-top: 3.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .ending-barra {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .newsletter-map {
+    width: fit-content;
+  }
+  .product-container {
+    padding: 0.5%;
+  }
+  .product-img {
+    height: 44vh;
+    width: auto;
+    max-height: 70vh;
+    max-width: 40vw;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

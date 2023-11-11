@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Kristi&family=Oooh+Baby&family=Poiret+One&display=swap');
 
-@font-face {
+/*@font-face {
     font-family: 'Ahsing' ;
     src: url(../font/Ahsing-Regular.otf);
 }
 
-/* RESET */
+/* RESET 
 *{
     margin: 0;
     padding: 0;
@@ -22,14 +22,14 @@
     font-family: 'Kristi', cursive;
     margin: 0;
 } 
-
+*/
 /* //INDEX.HTML// */
 
 /* SECCION BARRA */
-.bg-video{
+/* .bg-video{
     width: 100%;
     z-index: -80;
-}
+} */
 
 .barra-nav{
     height: 85vh;
@@ -41,7 +41,7 @@
     align-items: center;
 }
 
-.barra-principal{
+/* .barra-principal{
     font-family: 'Poiret One', cursive;
     background: linear-gradient(-75deg, #3b4b51, #efd7c7);
     width: 100%;
@@ -78,7 +78,7 @@
     display: flex;
     gap: 1rem;
     margin-right: 2rem;
-}
+} 
 
 .barra-iconos2 img{
     font-size: 5rem;
@@ -87,13 +87,11 @@
 
 .barra-buscador{
     display: flex; 
-}
+} 
 
 .buscador{
     border-radius: 20px 0 0 20px;
     height: 3rem;
-    /* opacity: 0.5; */
-    /* margin-top: 2px; */
     border-color: white;
     padding: 10px;
     background-color: #3b4b51;
@@ -104,7 +102,6 @@
 }
 
 .barra-buscador button{
-    /* margin-top: 2px; */
     border-color: white;
     border-radius: 0 20px 20px 0;
     height: 3rem;
@@ -151,7 +148,7 @@ button:hover{
 
 .barra-paginas{
     list-style: none;
-    /* margin-top: 8px; */
+    /* margin-top: 8px; 
     
 }
 
@@ -159,7 +156,6 @@ button:hover{
     text-decoration: none;
     color: black;
     font-weight:lighter;
-    
 }
 
 .barra-texto-activo{
@@ -176,14 +172,12 @@ button:hover{
     position: relative;
     height:97vh;   
     overflow: hidden;
-    
 }
 
 .bg-video{
     position: absolute;
     top: -5;
     left: 0;
-    /* width: 100%; */
     object-fit: cover;
     height: 97vh;
 }
@@ -196,7 +190,6 @@ button:hover{
     width: 100%;
     background-color: rgb(0, 0, 0);
     opacity: 0.2;
-
 }
 
 .banner-title{
@@ -223,8 +216,6 @@ button:hover{
 
 .contact a{
     position: fixed;
-    /* top: 85vh;
-    left: 90vw; */
     width: 7rem;    
     height: 7rem;
     background-color: #25D366;
@@ -272,7 +263,7 @@ button:hover{
     transition: color 0.5s;
 }
 
-/* MENU MOBILE */
+/* MENU MOBILE 
 #check-menu, .barra-principal label{
     display: none;
 }
@@ -290,15 +281,14 @@ button:hover{
     z-index: 20;
     align-items: center;
 }
-
-/* SECCIÓN TEMPORADA */
+*/
+/* SECCIÓN TEMPORADA
 .temporada{
     display: flex;
     justify-content: center; flex-direction: column;
     align-items: center;
     height: auto;
     font-family: 'Poiret One', cursive;
-    /* border-bottom: #7a7a7a 0.5px solid; */
 }
 
 .temporada-title{
@@ -321,7 +311,6 @@ button:hover{
     flex-wrap: wrap;
     gap:1em;
     justify-content: center;
-    /* margin: 0; */
 }
 
 .temporada-container{
@@ -333,7 +322,6 @@ button:hover{
 
 .temporada-img{
     height: 35rem;
-    /* width: auto; */
     cursor: pointer;
 }
 
@@ -368,7 +356,7 @@ button:hover{
 }
 
 
-/* SECCION NEWSLETTER */
+/* SECCION NEWSLETTER 
 .newsletter{
     height:max-content;
     width: 100%;
@@ -379,7 +367,6 @@ button:hover{
     align-items: center;
     border-top: 1px solid black;
     padding:2% 0 1% 0;
-    /* marg2n:1rem;  */
 }
 
 .newsletter-div{
@@ -458,7 +445,7 @@ button:hover{
 }
 
 
-/* SECCION FOOTER */
+/* SECCION FOOTER 
 .footer{
     background-color: #ebebeb;
     height: 15rem;
@@ -504,10 +491,6 @@ flex-direction: column;
 justify-content: center;
 }
 
-/* .footer-div3{
-    width: 4.8rem;
-} */
-
 .barra-redes{
     display: flex;
     justify-content: center;
@@ -550,9 +533,7 @@ justify-content: center;
     transition: 0.5s;
 }
 
-
-
-/* SECCION ENDING */
+/* SECCION ENDING 
 .ending{
     font-family: 'Poiret One', cursive;
     background-color: #f7f6f6;
@@ -931,178 +912,3 @@ justify-content: center;
 
 
 
-/* MEDIA QUERIES */
-@media (orientation: landscape) and (max-height : 480px) {
-    .barra-principal, .barra-secundaria{
-        display: none;
-    }
-    .barra-nav-mobile{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 5rem;
-        width: 100vw;
-    }
-    .barra-iconos-1, .barra-nav-mobile img{
-        height: 3rem;
-        margin: 2%;
-    }
-    .barra-title{
-        margin: 0;
-    }
-    .barra-iconos2{
-        display: none;
-    }
-    .prod-banner{
-        height: 150px;
-        margin-top: 3.4rem;
-    }
-
-    .banner-container h2{
-        font-size: 5rem;
-    }
-    .banner-container button{
-        font-size: 1.5rem;
-        height: 2.5rem;
-        width: 8rem;
-    }
-    .product-img{
-        width: 25rem;
-        object-fit: cover;
-    }
-    .product-link{
-        text-decoration: none;
-        /* margin: 0; */
-        height: auto;
-    }
-    .product-wishlist img, .product-cart img{
-        height: 1.5rem;
-    }
-}
-
-@media (max-width : 480px) {
-    .barra-principal, .barra-secundaria, .barra-ul{
-        display: none;
-    }
-    .barra-mobile #check-menu:checked ~ .barra-ul{
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        height: 55vh;
-        width: 70vw;
-        /* z-index: 100; */
-        left: 0;
-        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.365);
-    }
-
-    .barra-nav-mobile{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 5rem;
-        width:100vw;
-    }
-    .barra-nav-mobile img, .barra-iconos-1{
-        height: 2.5rem;
-    }
-    .barra-title{
-        margin: 0;
-    }
-    .banner-title{
-        display: flex;
-        flex-direction: column;
-        font-size: 8rem;
-    }
-    .temporada-container{
-        width: 100%;
-    }
-    .temporada-img{
-        margin: 5%;
-    }
-    .footer{
-        height: auto;
-    }
-    .footer-img{
-        height: 2rem;
-        line-height: 0;
-    }
-    .footer-div{
-        margin-top:1.2rem ;
-    }
-    .footer-div2 {
-        margin-bottom: 1.2rem;
-
-    }
-    .barra-redes {
-        gap:0;
-        max-width: 100vw;
-        
-    }
-    .barra-redes a{
-        height: 3.4rem;
-    }
-    .barra-redes img{
-        height: 3.5rem;
-        width: 3.5rem;
-    }
-    .ending{
-        padding: 1rem;
-    }
-    .ending-barra{
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 1rem;
-    }
-    .newsletter{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    .newsletter-div{
-        margin-bottom: 1rem;
-    }
-    
-    
-    .prod-banner{
-        height: 150px;
-        margin-top: 3.4rem;
-    }
-    
-    .banner-container h2{
-        font-size: 8rem;
-        
-    }
-    .product-img{
-        height: 60vh;
-        width: 80vw;
-    }
-    .product-wishlist img{
-        margin: 0.5%;
-    }
-    .carousel-inner{
-        margin-top: 3.4rem;
-    }
-}
-
-@media (max-width : 768px){
-    .ending-barra{
-        /* flex-direction: column; */
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 1rem;
-    }
-    .newsletter-map{
-        width: fit-content;
-    }
-    .product-container{
-        padding: 0.5%;
-    }
-    .product-img{
-        height: 44vh;
-        width: auto;
-        max-height: 70vh; 
-        max-width: 40vw;
-    }
-}

@@ -1,0 +1,11 @@
+// @for $i from 1 to 3{
+//     .titulo-#{$i}{
+//         font-size: 1rem*$i;
+//     }
+// }
+// @for $i from 1 through 15{
+//     .titulo-#{$i}{
+//         font-size: 1rem*$i;
+//     }
+// }
+//through mete al ultimo numero, mientras que to lo deja afuera
