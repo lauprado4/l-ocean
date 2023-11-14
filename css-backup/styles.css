@@ -572,7 +572,7 @@ justify-content: center;
 
 /* //PRODUCTOS.HTML// */
 
-/* SECCION BANNER */
+/* SECCION BANNER 
 .product{
     margin-bottom: 2rem;
 }
@@ -639,7 +639,6 @@ justify-content: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: start; */
 }
 
 .product-box{
@@ -673,10 +672,9 @@ justify-content: center;
     color: black
 }
 
-/* //SALE// */
+/* //SALE
 
 .banner-container{
-    /* margin-top: rem; */
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -760,9 +758,9 @@ justify-content: center;
 }
 
 
-/* //COLECCION// */
+/* //COLECCION
 
-/* CARRUSEL */
+/* CARRUSEL
 .carousel-inner{
     margin-top: 6.9rem;
 }
@@ -804,9 +802,9 @@ justify-content: center;
     font-weight: bold;
 }
 
-/* //NUESTRA HISTORIA// */
+/* //NUESTRA HISTORIA//
 
-/* SECCION HISTORIA */
+/* SECCION HISTORIA
 .historia{
     display: grid;
     font-family: 'Poiret One', cursive;
@@ -818,7 +816,6 @@ justify-content: center;
     "historia-container historia-container historia-container"
     "historia-img historia-img historia-img"
     "historia-parrafo-img historia-parrafo-img historia-img2";
-    /* border: 3px solid black; */
 }
 
 .historia-section{
@@ -850,7 +847,6 @@ justify-content: center;
     grid-area: historia-img;
     display: grid;
     grid-template-columns: 25% 25% 50%;
-    /* grid-template-rows: 50% 50%; */
     grid-template-areas: 
     "h-i-1 h-i-2 h-i-3";
     margin-bottom: 2% ;
@@ -898,7 +894,6 @@ justify-content: center;
     grid-area: h-i-4;
     opacity: 1;
     max-width: 100%;
-    /* height: 70%; */
     object-fit: cover;
 }
 
@@ -906,7 +901,6 @@ justify-content: center;
     grid-area: h-i-5;
     opacity: 1;
     max-width: 100%;
-    /* height: 70%; */
     object-fit: cover;
 }
 

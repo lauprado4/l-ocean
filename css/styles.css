@@ -20,6 +20,7 @@
   margin: 0;
 }
 
+/* //INDEX.HTML */
 .barra-mobile {
   font-family: "Poiret One", cursive;
   background: linear-gradient(-75deg, #3b4b51, #efd7c7);
@@ -38,6 +39,9 @@
   display: flex;
   gap: 1rem;
   margin-right: 2rem;
+}
+.barra-mobile .barra-nav-mobile .barra-iconos-1 #check-menu {
+  display: none;
 }
 .barra-mobile .barra-nav-mobile .barra-iconos-1 .barra-ul {
   font-family: "Poiret One", cursive;
@@ -567,6 +571,285 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* //PRODUCTOS.HTML */
+.prod-banner {
+  background-color: #a1c0ce;
+  height: 10rem;
+  margin-bottom: 2rem;
+  margin-top: 7rem;
+  display: flex;
+  align-items: self-end;
+  justify-content: space-evenly;
+}
+.prod-banner .prod-banner-title {
+  display: flex;
+  font-size: 7rem;
+  font-family: "Kristi", cursive;
+  font-weight: 50;
+  color: white;
+  z-index: 10;
+}
+
+.product {
+  margin-bottom: 2rem;
+}
+.product .product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-content: center;
+  max-width: 100vw;
+  margin-bottom: 2%;
+}
+.product .product-container .product-link {
+  text-decoration: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product .product-container .product-link .product-img {
+  height: 60vh;
+  width: 40vw;
+  object-fit: cover;
+  overflow: hidden;
+  max-height: 70vh;
+  max-width: 40vw;
+}
+.product .product-container .product-link .product-img:hover {
+  background-color: grey;
+  opacity: 0.7;
+  text-shadow: #516268;
+}
+.product .product-container .product-link .product-item {
+  text-decoration: none;
+}
+.product .product-container .product-link .product-item .product-name, .product .product-container .product-link .product-item .product-price {
+  font-family: "Poiret One", cursive;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.pagination {
+  margin-top: 1.2rem;
+  width: 100%;
+  justify-content: center;
+  color: black;
+}
+.pagination .page-link {
+  color: black;
+}
+
+/* //SALE.HTML */
+.banner-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.banner-container .banner-container div {
+  display: flex;
+  flex-direction: column;
+  margin: 0%;
+}
+.banner-container .banner-container div .banner-container h2 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: white;
+  font-size: 15rem;
+  text-shadow: 10px 10px #a1aba1;
+  margin: 0;
+}
+.banner-container .banner-container div .banner-container button {
+  position: absolute;
+  top: 85%;
+  left: 25%;
+  height: 3.5rem;
+  width: 10rem;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: white;
+  border-radius: 5px;
+  margin: 0;
+  border: 0;
+  font-family: "Poiret One", cursive;
+  font-size: 2rem;
+  font-weight: 500;
+  background-color: #a1aba1;
+}
+.banner-container .banner-container div .banner-container button:hover {
+  background-color: #7b847b;
+  color: white;
+}
+
+.product .prod-banner2 {
+  display: flex;
+  height: 7rem;
+  position: relative;
+  justify-content: start;
+  align-items: flex-end;
+  background-color: rgba(59, 75, 81, 0.231372549);
+}
+.product .prod-banner2 .prod-banner-title2 {
+  font-size: 4rem;
+  font-family: "Poiret One", cursive;
+  font-weight: 50;
+  color: black;
+  position: absolute;
+  margin-left: 4.8vw;
+}
+.product h3 {
+  font-family: "Poiret One", cursive;
+  margin: 1% 0 1% 9%;
+  font-size: 3rem;
+}
+.product .product-container .product-link .product-box {
+  display: flex;
+  justify-content: space-between;
+}
+.product .product-container .product-link .product-box .product-action {
+  display: flex;
+  align-items: center;
+}
+.product .product-container .product-link .product-box .product-action .product-cart img, .product .product-container .product-link .product-box .product-action .product-wishlist img {
+  height: 2rem;
+  margin: 0.5rem;
+}
+
+/* //COLECCION.HTML */
+.carousel-inner {
+  margin-top: 6.9rem;
+}
+.carousel-inner .carousel-item {
+  height: 30rem;
+}
+.carousel-inner .carousel-item img {
+  height: 50vh;
+  object-fit: cover;
+}
+.carousel-inner .carousel-item .carousel-text {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.carousel-inner .carousel-item .carousel-text h2 {
+  position: absolute;
+  z-index: 10;
+  top: 40%;
+  left: 46vw;
+  color: white;
+  font-family: "Poiret One", cursive;
+  font-weight: 700;
+  font-size: 4rem;
+  text-shadow: #6a8474 3px 3px 3px;
+}
+
+.coleccion-texto {
+  padding: 1%;
+  background-color: rgba(239, 215, 199, 0.3294117647);
+}
+.coleccion-texto p {
+  font-family: "Poiret One", cursive;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* //HISTORIA.HTML */
+.historia-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.historia-section .historia-us {
+  margin-top: 9rem;
+  font-family: "Ahsing";
+  font-size: 10rem;
+  color: #3b4b51;
+}
+
+.historia {
+  display: grid;
+  font-family: "Poiret One", cursive;
+  font-size: 1.3rem;
+  height: auto;
+  grid-template-columns: 25% 25% 50%;
+  grid-template-rows: 20% 45% 35%;
+  grid-template-areas: "historia-container historia-container historia-container" "historia-img historia-img historia-img" "historia-parrafo historia-img2 historia-img2";
+}
+.historia .historia-container {
+  grid-area: historia-container;
+  padding: 1%;
+}
+.historia .historia-container::first-letter {
+  font-size: 3rem;
+  font-weight: bolder;
+  font-family: "Ahsing";
+}
+.historia .historia-img {
+  overflow: hidden;
+  grid-area: historia-img;
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+  grid-template-areas: "h-i-1 h-i-2 h-i-3";
+  margin-bottom: 2%;
+}
+.historia .historia-img .h-i-1 {
+  grid-area: h-i-1;
+  padding: 3%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.historia .historia-img .h-i-2 {
+  grid-area: h-i-2;
+  padding: 3%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.historia .historia-img .h-i-3 {
+  grid-area: h-i-3;
+  padding: 1.5%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.historia .historia-parrafo-img {
+  grid-area: historia-parrafo;
+  padding: 1%;
+  margin-bottom: 2rem;
+}
+.historia .historia-img2 {
+  display: flex;
+  flex-direction: row;
+  grid-area: historia-img2;
+}
+.historia .historia-img2 .h-i-4 {
+  grid-area: h-i-4;
+  opacity: 1;
+  width: 100%;
+}
+.historia .historia-img2 .h-i-5 {
+  grid-area: h-i-5;
+  opacity: 1;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 /* MEDIA QUERIES */
