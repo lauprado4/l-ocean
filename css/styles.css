@@ -660,12 +660,12 @@
   height: 100vh;
   position: relative;
 }
-.banner-container .banner-container div {
+.banner-container div {
   display: flex;
   flex-direction: column;
   margin: 0%;
 }
-.banner-container .banner-container div .banner-container h2 {
+.banner-container div h2 {
   position: absolute;
   top: 50%;
   left: 25%;
@@ -676,7 +676,7 @@
   text-shadow: 10px 10px #a1aba1;
   margin: 0;
 }
-.banner-container .banner-container div .banner-container button {
+.banner-container div button {
   position: absolute;
   top: 85%;
   left: 25%;
@@ -693,7 +693,7 @@
   font-weight: 500;
   background-color: #a1aba1;
 }
-.banner-container .banner-container div .banner-container button:hover {
+.banner-container div button:hover {
   background-color: #7b847b;
   color: white;
 }
@@ -789,7 +789,7 @@
   font-size: 1.3rem;
   height: auto;
   grid-template-columns: 25% 25% 50%;
-  grid-template-rows: 20% 45% 35%;
+  grid-template-rows: 15% 38% 35%;
   grid-template-areas: "historia-container historia-container historia-container" "historia-img historia-img historia-img" "historia-parrafo historia-img2 historia-img2";
 }
 .historia .historia-container {
@@ -839,17 +839,15 @@
   display: flex;
   flex-direction: row;
   grid-area: historia-img2;
+  justify-content: space-around;
 }
 .historia .historia-img2 .h-i-4 {
   grid-area: h-i-4;
   opacity: 1;
-  width: 100%;
 }
 .historia .historia-img2 .h-i-5 {
   grid-area: h-i-5;
   opacity: 1;
-  max-width: 100%;
-  object-fit: cover;
 }
 
 /* MEDIA QUERIES */

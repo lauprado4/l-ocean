@@ -755,12 +755,12 @@
         height: 100vh;
         position: relative;
     }
-    .banner-container div{
+    div{
         display: flex;
         flex-direction: column;
         margin: 0%;
         
-        .banner-container h2{
+        h2{
             position: absolute;
             top: 50%;
             left: 25%;
@@ -772,7 +772,7 @@
             margin: 0;
         }
 
-        .banner-container button{
+        button{
             position: absolute;
             top: 85%;
             left: 25%;
@@ -881,7 +881,6 @@
 
 //COLECCION
 
-
 // COLECCION TEXTO
 .coleccion-texto{
     padding: 1%;
@@ -918,7 +917,7 @@
     font-size: 1.3rem;
     height: auto;
     grid-template-columns: 25% 25% 50%;
-    grid-template-rows: 20% 45% 35%;
+    grid-template-rows: 15% 38% 35%;
     grid-template-areas:
     "historia-container historia-container historia-container"
     "historia-img historia-img historia-img"
@@ -979,19 +978,21 @@
         display: flex;
         flex-direction: row;
         grid-area: historia-img2;
-        // justify-content: space-around;
+        justify-content: space-around;
 
         .h-i-4{
             grid-area: h-i-4;
             opacity: 1;
-            width: 100%;
+            // width     50%;
+            // height: 50%;
         }
         
         .h-i-5{
             grid-area: h-i-5;
             opacity: 1;
-            max-width: 100%;
-            object-fit: cover;
+            // width: 50%;
+            // height: 50%;
+            // object-fit: cover;
         }
     }
     
