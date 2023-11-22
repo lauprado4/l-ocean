@@ -3,6 +3,18 @@
     .barra-principal, .barra-secundaria{
         display: none;
     }
+    .barra-mobile #check-menu:checked ~ .barra-ul{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 75vh;
+        width: 50vw;
+        left: 0;
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.365);
+        padding-top: 1rem ;
+    }
     .barra-nav-mobile{
         display: flex;
         justify-content: space-between;
@@ -44,11 +56,28 @@
     .product-wishlist img, .product-cart img{
         height: 1.5rem;
     }
+    .ending-barra{
+        flex-wrap: wrap;
+        gap: 0.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .map-container{
+        min-height: 10rem;
+    }
+    .newsletter-map{
+        min-height: 10rem;
+    }
+    .carousel-text h2{
+        top:5%;
+    }
 }
 
 @media (max-width : 480px) {
     .barra-principal, .barra-secundaria{
         display: none;
+    }
+    .barra-mobile{
+        display: flex;
     }
     .barra-mobile #check-menu:checked ~ .barra-ul{
         background-color: white;
@@ -60,37 +89,44 @@
         width: 70vw;
         left: 0;
         box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.365);
+        padding-top: 1rem ;
     }
-    .barra-mobile{
-        display: flex;
-    }
-
     .barra-nav-mobile{
         display: flex;
         justify-content: space-around;
         align-items: center;
         height: 5rem;
         width:100vw;
-    }
-    .barra-nav-mobile img, .barra-iconos-1{
-        height: 2.5rem;
+
+        img, .barra-iconos-1{
+            height: 2.5rem;
+        }
     }
     .barra-title{
-        margin: 0;
+        margin-left: 0;
     }
     .banner-title{
         display: flex;
         flex-direction: column;
-        font-size: 8rem;
+
+        p{
+            font-size: 7rem;
+        }
     }
     .temporada-container{
-        width: 100%;
+        width: 100vw;
+        display:flex;
+        justify-content: center;
+
+        .temporada-img{
+            padding: 10%;
+            width:90vw;
+        }
     }
-    .temporada-img{
-        margin: 5%;
-    }
+    
     .footer{
         height: auto;
+        gap:0;
     }
     .footer-img{
         height: 2rem;
@@ -104,59 +140,138 @@
 
     }
     .barra-redes {
-        gap:0;
-        max-width: 100vw;
+        gap:0rem;
+        width: 95vw;
+
+        a{
+            width: 90vw;
+        }
+
+       .footer-img{ 
         
-    }
-    .barra-redes a{
-        height: 3.4rem;
-    }
-    .barra-redes img{
-        height: 3.5rem;
-        width: 3.5rem;
-    }
+            img{
+                height: 1.5rem;
+                width: 1.5rem;
+            }
+       }
+    }   
+   
     .ending{
         padding: 1rem;
     }
     .ending-barra{
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 1rem;
+        gap: 0.2rem;
+        margin-bottom: 0.5rem;
     }
     .newsletter{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        padding-top: 5%;
     }
     .newsletter-div{
         margin-bottom: 1rem;
     }
     
+    .product{
+        .product-container{
+            flex-direction: column;
+
+            .product-link{
+                width: 100vw;
+                padding: 5%;
+
+                .product-img{
+                    height: 60vh;
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+// SALE
+    .sale-banner{
+        .banner-container{
+            img{
+                height: 95vh;
+                object-fit: cover;
+                background-position: bottom;
+            }
+            h2{
+                font-size: 10rem;
+                left: 50%;
+                top:60%
+            }
+            button{
+                margin-top: 5%;
+                left:50%
+            }
+        }
+    }
+     
     
+    .product-sale{
+
+        .product-container-sale{
+            width: 100vw;
+            padding: 5%;
+
+            .product-link-sale{
+                
+                .product-img-sale{
+                    height: 60vh;
+                    width: 80vw;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    
+
     .prod-banner{
         height: 150px;
         margin-top: 3.4rem;
     }
     
-    .banner-container h2{
-        font-size: 8rem;
-        
-    }
-    .product-img{
-        height: 60vh;
-        width: 80vw;
-    }
+    
+   
     .product-wishlist img{
         margin: 0.5%;
     }
     .carousel-inner{
         margin-top: 3.4rem;
     }
+
+    // NUESTRA-HISTORIA
+    .historia-section{
+        .historia-title{
+            font-size: 5rem;
+            margin-top: 7rem;
+        }
+    }
+
+    .historia{
+        .historia-container{
+            p{
+                padding: 3%;
+            }
+        }
+        .historia-img{
+            display: flex;
+            flex-direction: column;    
+        }
+        .historia-parrafo-img{
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
+
+
 
 @media (max-width : 768px){
     .ending-barra{
-        flex-wrap: wrap;
         gap: 0.5rem;
         margin-bottom: 1rem;
     }
@@ -171,5 +286,40 @@
         width: auto;
         max-height: 70vh; 
         max-width: 40vw;
+    }    
+    
+    // NUESTRA-HISTORIA
+    .historia{
+        .historia-container{
+            p{
+                padding: 3%;
+            }
+        }
+        .historia-img{
+            display: flex;
+            flex-direction: column;    
+        }
+        .historia-parrafo-img{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width : 900px){
+    .historia{
+        .historia-container{
+            p{
+                padding: 3%;
+            }
+        }
+        .historia-img{
+            display: flex;
+            flex-direction: column;    
+        }
+        .historia-parrafo-img{
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
