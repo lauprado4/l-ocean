@@ -1,5 +1,10 @@
+
 /* MEDIA QUERIES */
+
 @media (orientation: landscape) and (max-height : 480px) {
+
+    //---------- INDEX ----------//
+    //Header
     .barra-principal, .barra-secundaria{
         display: none;
     }
@@ -21,64 +26,110 @@
         align-items: center;
         height: 5rem;
         width: 100vw;
+
+        .barra-iconos-1, .barra-nav-mobile img{
+            height: 3rem;
+            margin: 2%;
+        }
+
+        .barra-title{
+            margin: 0;
+        }
     }
-    .barra-iconos-1, .barra-nav-mobile img{
-        height: 3rem;
-        margin: 2%;
+
+    .barra-principal{
+        .barra-title{
+            margin: 0;
+        }
+        .barra-iconos2{
+            display: none;
+        }
     }
-    .barra-title{
-        margin: 0;
+
+    //Main
+    .temporada{
+        .temporada-title{
+            font-size: 2rem;
+        }
     }
-    .barra-iconos2{
-        display: none;
+
+    .newsletter{
+        .map-container{
+            min-height: 10rem;
+            
+            .newsletter-map{
+                min-height: 10rem;
+            }
+        }
+
     }
+
+    .ending{
+        .ending-barra{
+            flex-wrap: wrap;
+            gap: 0.2rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+
+    //---------- PRODUCTOS ----------//
     .prod-banner{
         height: 150px;
         margin-top: 3.4rem;
     }
 
-    .banner-container h2{
-        font-size: 5rem;
+    .product{
+        .product-container{
+            .product-link{
+                text-decoration: none;
+                height: auto;
+
+                .product-img{
+                    width: 25rem;
+                    object-fit: cover;
+                }
+            }
+        }
     }
-    .banner-container button{
-        font-size: 1.5rem;
-        height: 2.5rem;
-        width: 8rem;
+
+
+    //---------- SALE ----------//
+    .sale-banner{
+        .banner-container h2{
+            font-size: 5rem;
+        }
+        .banner-container button{
+            font-size: 1.5rem;
+            height: 2.5rem;
+            width: 8rem;
+        }
     }
-    .product-img{
-        width: 25rem;
-        object-fit: cover;
+    
+    .product-sale{
+        .product-wishlist img, .product-cart img{
+            height: 1.5rem;
+        }
     }
-    .product-link{
-        text-decoration: none;
-        height: auto;
-    }
-    .product-wishlist img, .product-cart img{
-        height: 1.5rem;
-    }
-    .ending-barra{
-        flex-wrap: wrap;
-        gap: 0.2rem;
-        margin-bottom: 0.5rem;
-    }
-    .map-container{
-        min-height: 10rem;
-    }
-    .newsletter-map{
-        min-height: 10rem;
-    }
+    
+
+    //---------- COLECCION ----------//
+
     .carousel-text h2{
         top:5%;
     }
 }
 
+
+
+
 @media (max-width : 480px) {
+
+    //---------- INDEX ----------//
     .barra-principal, .barra-secundaria{
         display: none;
     }
-    .barra-mobile{
-        display: flex;
-    }
+
     .barra-mobile #check-menu:checked ~ .barra-ul{
         background-color: white;
         display: flex;
@@ -91,88 +142,101 @@
         box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.365);
         padding-top: 1rem ;
     }
-    .barra-nav-mobile{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 5rem;
-        width:100vw;
 
-        img, .barra-iconos-1{
-            height: 2.5rem;
+    .barra-mobile{
+        display: flex;
+
+        .barra-nav-mobile{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 5rem;
+            width:100vw;
+    
+            img, .barra-iconos-1{
+                height: 2.5rem;
+            }
+
+            .barra-title{
+                margin-left: 0;
+            }
         }
     }
-    .barra-title{
-        margin-left: 0;
+    
+    .banner{
+        .banner-title{
+            display: flex;
+            flex-direction: column;
+    
+            p{
+                font-size: 7rem;
+            }
+        }
     }
-    .banner-title{
+
+    .temporada{
+        .temporada-container{
+            width: 100vw;
+            display:flex;
+            justify-content: center;
+    
+            .temporada-img{
+                padding: 10%;
+                width:90vw;
+            }
+        }
+    }
+
+    .newsletter{
         display: flex;
         flex-direction: column;
-
-        p{
-            font-size: 7rem;
-        }
-    }
-    .temporada-container{
-        width: 100vw;
-        display:flex;
-        justify-content: center;
-
-        .temporada-img{
-            padding: 10%;
-            width:90vw;
+        flex-wrap: wrap;
+        padding-top: 5%;
+        
+        .newsletter-div{
+            margin-bottom: 1rem;
         }
     }
     
     .footer{
         height: auto;
         gap:0;
-    }
-    .footer-img{
-        height: 2rem;
-        line-height: 0;
-    }
-    .footer-div{
-        margin-top:1.2rem ;
-    }
-    .footer-div2 {
-        margin-bottom: 1.2rem;
-
-    }
-    .barra-redes {
-        gap:0rem;
-        width: 95vw;
-
-        a{
-            width: 90vw;
+        
+        .footer-div{
+            margin-top:1.2rem ;
         }
 
-       .footer-img{ 
-        
-            img{
-                height: 1.5rem;
-                width: 1.5rem;
-            }
-       }
-    }   
+        .footer-div2 {
+            margin-bottom: 1.2rem;
+    
+            .barra-redes {
+                gap:0rem;
+                width: 95vw;
+
+                    .footer-img a{ 
+                        height: 2rem;
+                        line-height: 0;
+                        width: 90vw;
+    
+                    img{
+                        height: 5rem;
+                        width: 5rem;
+                    }
+               }
+            }   
+        }
+    }
    
     .ending{
         padding: 1rem;
-    }
-    .ending-barra{
-        gap: 0.2rem;
-        margin-bottom: 0.5rem;
-    }
-    .newsletter{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        padding-top: 5%;
-    }
-    .newsletter-div{
-        margin-bottom: 1rem;
+        
+        .ending-barra{
+            gap: 0.2rem;
+            margin-bottom: 0.5rem;
+        }
     }
     
+    //---------- PRODUCTOS ----------//
     .product{
         .product-container{
             flex-direction: column;
@@ -190,7 +254,7 @@
         }
     }
 
-// SALE
+    //---------- SALE ----------//
     .sale-banner{
         .banner-container{
             img{
@@ -210,7 +274,6 @@
         }
     }
      
-    
     .product-sale{
 
         .product-container-sale{
@@ -224,26 +287,30 @@
                     width: 80vw;
                     max-width: 100%;
                 }
+                
+                .product-box-sale{
+                    .product-action-sale{
+                        .product-wishlist img{
+                            margin: 0.5%;
+                        }
+                    }
+                }
             }
         }
     }
-    
 
     .prod-banner{
         height: 150px;
         margin-top: 3.4rem;
     }
     
-    
-   
-    .product-wishlist img{
-        margin: 0.5%;
-    }
+
+    //---------- COLECCION ----------//
     .carousel-inner{
         margin-top: 3.4rem;
     }
 
-    // NUESTRA-HISTORIA
+    //---------- NUESTRA HISTORIA ----------//
     .historia-section{
         .historia-title{
             font-size: 5rem;
@@ -270,6 +337,7 @@
 
 
 
+
 @media (max-width : 768px){
     .ending-barra{
         gap: 0.5rem;
@@ -280,13 +348,15 @@
     }
     .product-container{
         padding: 0.5%;
+
+        .product-img{
+            height: 44vh;
+            width: auto;
+            max-height: 70vh; 
+            max-width: 40vw;
+        } 
     }
-    .product-img{
-        height: 44vh;
-        width: auto;
-        max-height: 70vh; 
-        max-width: 40vw;
-    }    
+       
     
     // NUESTRA-HISTORIA
     .historia{
@@ -305,6 +375,9 @@
         }
     }
 }
+
+
+
 
 @media (max-width : 900px){
     .historia{
