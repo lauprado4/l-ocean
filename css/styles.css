@@ -15,8 +15,7 @@
 }
 @keyframes slide-in {
   from {
-    opacity: 0.5;
-    translate: 120%;
+    opacity: 0;
   }
   to {
     opacity: 1;
@@ -307,7 +306,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: end;
-  margin: 1.5rem;
+  margin-right: 1.5rem;
 }
 .contact:hover {
   background-color: rgba(81, 98, 104, 0.137254902);
@@ -358,6 +357,8 @@
   font-family: "Poiret One", cursive;
 }
 .temporada .temporada-title {
+  width: auto;
+  max-width: 90vw;
   display: flex;
   justify-content: center;
   font-size: 4rem;
@@ -534,10 +535,11 @@
   line-height: 4rem;
   width: 100%;
   height: 4.8rem;
+  justify-content: center;
   align-items: center;
   text-decoration: none;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
-  margin: 0 10px;
+  margin: 5px;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
@@ -809,10 +811,10 @@
   margin-top: 6.9rem;
 }
 .carousel-inner .carousel-item {
-  height: 30rem;
+  height: auto;
 }
 .carousel-inner .carousel-item img {
-  height: 50vh;
+  height: 70vh;
   object-fit: cover;
   transition: ease-in-out 0.5ms;
 }
@@ -985,7 +987,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     height: 75vh;
-    width: 50vw;
+    width: 40vw;
     left: 0;
     box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.365);
     padding-top: 1rem;
@@ -997,9 +999,9 @@
     height: 5rem;
     width: 100vw;
   }
-  .barra-nav-mobile .barra-iconos-1, .barra-nav-mobile .barra-nav-mobile img {
-    height: 3rem;
-    margin: 2%;
+  .barra-nav-mobile .barra-iconos-1, .barra-nav-mobile img {
+    width: 2.5rem;
+    margin: 3%;
   }
   .barra-nav-mobile .barra-title {
     margin: 0;
@@ -1046,6 +1048,12 @@
   }
   .product-sale .product-wishlist img, .product-sale .product-cart img {
     height: 1.5rem;
+  }
+  .carousel-inner {
+    margin-top: 5rem;
+  }
+  .carousel-inner .carousel-item img {
+    height: 100vh;
   }
   .carousel-text h2 {
     top: 5%;
@@ -1105,11 +1113,16 @@
     justify-content: center;
   }
   .temporada .temporada-fotos .temporada-container .temporada-img {
+    height: 32rem;
     padding: 10%;
     width: 100vw;
   }
+  .temporada .temporada-fotos .temporada-container .temporada-img:hover {
+    display: none;
+  }
   .temporada .temporada-fotos .temporada-container .temporada-texto {
     margin: 0px;
+    width: 100vw;
   }
   .newsletter {
     display: flex;
@@ -1209,6 +1222,9 @@
   .historia .historia-parrafo-img {
     display: flex;
     flex-direction: column;
+  }
+  .historia .historia-parrafo-img .h-i-4 {
+    overflow: hidden;
   }
 }
 @media (max-width: 768px) {

@@ -15,7 +15,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         height: 75vh;
-        width: 50vw;
+        width: 40vw;
         left: 0;
         box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.365);
         padding-top: 1rem ;
@@ -27,9 +27,9 @@
         height: 5rem;
         width: 100vw;
 
-        .barra-iconos-1, .barra-nav-mobile img{
-            height: 3rem;
-            margin: 2%;
+        .barra-iconos-1, img{
+            width: 2.5rem;
+            margin: 3%;
         }
 
         .barra-title{
@@ -119,7 +119,14 @@
     
 
     //---------- COLECCION ----------//
-
+    .carousel-inner{
+        margin-top: 5rem;
+        .carousel-item{
+            img{
+                height: 100vh;
+            }
+        }
+    }
     .carousel-text h2{
         top:5%;
     }
@@ -196,12 +203,18 @@
                 justify-content: center;
         
                 .temporada-img{
+                    height: 32rem;
                     padding: 10%;
                     width:100vw;
+
+                    &:hover{
+                        display: none;
+                    }
                 }
     
                 .temporada-texto{
                     margin: 0px;
+                    width: 100vw;
                 }
             }
         }
@@ -354,6 +367,10 @@
         .historia-parrafo-img{
             display: flex;
             flex-direction: column;
+
+            .h-i-4{
+                overflow: hidden;
+            }
         }
     }
 }
