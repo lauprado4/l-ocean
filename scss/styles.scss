@@ -28,7 +28,7 @@
 // BARRA MOBILE
 .barra-mobile {
     font-family: $font-principal;
-    background: linear-gradient(-75deg, #3b4b51, #efd7c7);
+    background: linear-gradient(-75deg, #3b4b51, $color-secundario);
     width: 100vw;
     height: 5rem;
     position: fixed;
@@ -96,7 +96,7 @@
 // BARRA PRINCIPAL
 .barra-principal {
     font-family: $font-principal;
-    background: linear-gradient(-75deg, $color-principal,$color-secundario);
+    background: linear-gradient(-75deg, #3b4b51,$color-secundario);
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -126,7 +126,7 @@
     .barra-title-wave{
         font-family: $font-logo;
         margin-left: 2rem;
-        color: $color-principal;
+        color: #ce9b7a;;
         opacity: 1;
         font-size: 2rem;
         height: 4rem;
@@ -196,7 +196,7 @@
                 height: 3rem;
                 border-color: white;
                 padding: 10px;
-                background-color: $color-secundario;
+                background-color: $color-secundario ;
                 font-size: 1.2rem;
                 font-weight: bold;
                 color: white;

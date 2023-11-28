@@ -106,7 +106,7 @@
 
 .barra-principal {
   font-family: "Poiret One", cursive;
-  background: linear-gradient(-75deg, #a1c0ce, #efd7c7);
+  background: linear-gradient(-75deg, #3b4b51, #efd7c7);
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -135,7 +135,7 @@
 .barra-principal .barra-title-wave {
   font-family: "Ahsing";
   margin-left: 2rem;
-  color: #a1c0ce;
+  color: #ce9b7a;
   opacity: 1;
   font-size: 2rem;
   height: 4rem;
@@ -1148,7 +1148,6 @@
     width: 95vw;
   }
   .footer .footer-div2 .barra-redes .footer-img a {
-    height: 2rem;
     line-height: 0;
     width: 90vw;
   }
