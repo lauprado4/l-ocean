@@ -180,16 +180,32 @@
     }
 
     .temporada{
-        .temporada-container{
-            width: 100vw;
-            display:flex;
-            justify-content: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+
+        .temporada-title{
+            font-size: 3.8rem;
+        }
+        
+        .temporada-fotos{
+            .temporada-container{
+                width: 100vw;
+                display:flex;
+                justify-content: center;
+        
+                .temporada-img{
+                    padding: 10%;
+                    width:100vw;
+                }
     
-            .temporada-img{
-                padding: 10%;
-                width:90vw;
+                .temporada-texto{
+                    margin: 0px;
+                }
             }
         }
+       
     }
 
     .newsletter{

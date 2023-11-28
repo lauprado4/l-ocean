@@ -1090,14 +1090,26 @@
   .banner .banner-title p {
     font-size: 7rem;
   }
-  .temporada .temporada-container {
+  .temporada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  .temporada .temporada-title {
+    font-size: 3.8rem;
+  }
+  .temporada .temporada-fotos .temporada-container {
     width: 100vw;
     display: flex;
     justify-content: center;
   }
-  .temporada .temporada-container .temporada-img {
+  .temporada .temporada-fotos .temporada-container .temporada-img {
     padding: 10%;
-    width: 90vw;
+    width: 100vw;
+  }
+  .temporada .temporada-fotos .temporada-container .temporada-texto {
+    margin: 0px;
   }
   .newsletter {
     display: flex;
