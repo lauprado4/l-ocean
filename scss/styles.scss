@@ -1,8 +1,7 @@
 @import "./partials/_fonts.scss";
 @import "./partials/_variables.scss";
-@import "./partials/_condicionales.scss";
-@import "./partials/_bucles.scss";
 @import "./partials/_animations.scss";
+@import "./partials/_base.scss";
 
 // RESET //
 * {
@@ -20,6 +19,10 @@
     font-family: 'Poiret One', cursive;
     font-family: 'Kristi', cursive;
     margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 //-------------------- INDEX.HTML --------------------//
@@ -453,223 +456,6 @@
     }
 }
 
-// NEWSLETTER
-.newsletter{
-    height:max-content;
-    width: 100%;
-    font-family: $font-principal;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid black;
-    padding:2% 0 1% 0;
-
-    .newsletter-div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        margin-bottom: 2%;
-
-        .newsletter-title{
-            display: flex;
-            justify-content: center;
-            font-size: 2.5rem;
-            margin-bottom: 1.2rem;
-            align-items: center;
-        }
-
-        .newsletter-parrafo{
-            display: flex;
-            width: auto;
-            max-width: 90%;
-            margin-bottom: 0.5;
-            font-size: 1.3rem;
-        }
-        
-        .newsletter-subscribe{
-            display: flex; flex-direction: column;
-            align-items: center;
-
-            .form-label{
-                background-color: white;
-                margin: 0.8rem;
-                border-radius: 5px;
-                border-top: #a1aba1;
-                border-left: #a1aba1;
-                border-right: $color-secundario;
-                height: 2rem;
-                width: 20vw;
-                min-width: fit-content;
-                font-family: $font-principal;
-                font-weight: bolder;
-                padding-left: 2%;
-            }
-            .form-submit{
-                background-color: $color-secundario;
-                margin: 10px;
-                width: 6vw;
-                min-width: fit-content;
-                height: 2rem;
-                border-radius: 5px;
-                color: white;
-                border-color: $color-secundario;
-                font-family: $font-principal;
-                font-weight: bolder;
-
-                &:hover{
-                    background-color: #e4c3ae ;
-                }
-            }
-        }
-    }
-
-    .map-container{
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        margin: 2% 0 4% 0;
-
-        .newsletter-map{
-            width: 95%;
-            height: 20vh;
-            z-index: -1;
-            border-radius: 10px;
-        }
-    } 
-}
-//FIN DE MAIN//
-
-//INICIO FOOTER//
-//FOOTER
-.footer{
-    background-color: #ebebeb;
-    height: 15rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-
-    .footer-div{
-        .footer-logo{
-            width: 9.7rem;
-            height: 9.7rem;
-        }
-    }
-
-    .footer-div2{
-        display: flex; 
-        flex-direction: column;
-        justify-content: center;
-
-        .footer-name{
-            display: flex;
-            font-family: $font-principal;
-            font-size: 2rem;
-            justify-content: center;
-            margin-bottom: 1.2rem;
-        }
-        .barra-redes{
-            display: flex;
-            justify-content: center;
-
-            .footer-img{
-                font-size: 2rem;
-                line-height: 4rem;
-                width: 100%;
-                height: 4.8rem;
-                justify-content: center;
-                align-items: center;
-                text-decoration: none;
-                box-shadow: 0 0 20px 10px rgba(0,0,0,0.05);
-                margin: 5px;
-                border-radius: 50%;
-                position: relative;
-                overflow: hidden;
-                transition: transform 0.5s;
-
-                &:hover::after{
-                    top: 0;
-                }
-                
-                &:hover .footer-img{
-                    color: white;
-                }
-                
-                &:hover{
-                    transform: translateY(-10px);
-                }
-                
-                &::after{
-                    content: "";
-                    width: 100%;
-                    height: 100%;
-                    top:-90px;
-                    left: 0;
-                    background: linear-gradient(-45deg, #a1aba1, #efd7c7);
-                    position: absolute;
-                    transition: 0.5s;
-                }
-
-                img{
-                    width: 4.8rem;
-                    height: 4.8rem;
-                    padding: 0.6rem;
-                    color: black;
-                    position: relative;
-                    z-index: 5;
-                    transition: color 0.5s;
-                }
-            }
-        }
-    }
-}
-
-//ENDING
-.ending{
-    font-family: $font-principal;
-    background-color: #f7f6f6;
-    height: max-content;
-    padding: 1.2rem;
-
-    .ending-barra{
-        display: flex;
-        gap: 0.5rem;
-        font-size: 1.2rem;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        list-style: none;
-        margin-bottom: 1.2rem;
-        padding: 0;
-        flex-wrap: wrap;
-
-        .ending-paginas{
-            .ending-texto{
-                text-decoration: none;
-                color: black;
-            }
-        }
-        
-        .separador{
-            margin: 0;
-            padding: 0;
-            margin: 0.2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-
-    .ending-parrafo{
-        margin: 1.2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
 
 
 //-------------------- PRODUCTOS.HTML --------------------//
@@ -823,6 +609,7 @@
 
 // PRODUCTOS SALE
 .product-sale{
+    scroll-margin-top: 8rem;
     .prod-banner2{
         display: flex;
         height: 7rem;

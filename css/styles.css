@@ -30,6 +30,196 @@
     clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
   }
 }
+.newsletter {
+  height: max-content;
+  width: 100%;
+  font-family: "Poiret One", cursive;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid black;
+  padding: 2% 0 1% 0;
+}
+.newsletter .newsletter-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 2%;
+}
+.newsletter .newsletter-div .newsletter-title {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+  align-items: center;
+}
+.newsletter .newsletter-div .newsletter-parrafo {
+  display: flex;
+  width: auto;
+  max-width: 90%;
+  margin-bottom: 0.5;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.newsletter .newsletter-div .newsletter-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newsletter .newsletter-div .newsletter-subscribe .form-label {
+  background-color: white;
+  margin: 0.8rem;
+  border-radius: 5px;
+  border-top: #a1aba1;
+  border-left: #a1aba1;
+  border-right: #efd7c7;
+  height: 2rem;
+  width: 20vw;
+  min-width: fit-content;
+  font-family: "Poiret One", cursive;
+  font-weight: bolder;
+  padding-left: 2%;
+}
+.newsletter .newsletter-div .newsletter-subscribe .form-submit {
+  background-color: #efd7c7;
+  margin: 10px;
+  width: 6vw;
+  min-width: fit-content;
+  height: 2rem;
+  border-radius: 5px;
+  color: white;
+  border-color: #efd7c7;
+  font-family: "Poiret One", cursive;
+  font-weight: bolder;
+}
+.newsletter .newsletter-div .newsletter-subscribe .form-submit:hover {
+  background-color: #e4c3ae;
+}
+.newsletter .map-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 2% 0 4% 0;
+}
+.newsletter .map-container .newsletter-map {
+  width: 95%;
+  height: 20vh;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.footer {
+  background-color: #ebebeb;
+  height: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer .footer-div .footer-logo {
+  width: 9.7rem;
+  height: 9.7rem;
+}
+.footer .footer-div2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer .footer-div2 .footer-name {
+  display: flex;
+  font-family: "Poiret One", cursive;
+  font-size: 2rem;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+.footer .footer-div2 .barra-redes {
+  display: flex;
+  justify-content: center;
+}
+.footer .footer-div2 .barra-redes .footer-img {
+  font-size: 2rem;
+  line-height: 4rem;
+  width: 100%;
+  height: 4.8rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+  margin: 5px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+.footer .footer-div2 .barra-redes .footer-img:hover::after {
+  top: 0;
+}
+.footer .footer-div2 .barra-redes .footer-img:hover .footer-img {
+  color: white;
+}
+.footer .footer-div2 .barra-redes .footer-img:hover {
+  transform: translateY(-10px);
+}
+.footer .footer-div2 .barra-redes .footer-img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -90px;
+  left: 0;
+  background: linear-gradient(-45deg, #a1aba1, #efd7c7);
+  position: absolute;
+  transition: 0.5s;
+}
+.footer .footer-div2 .barra-redes .footer-img img {
+  width: 4.8rem;
+  height: 4.8rem;
+  padding: 0.6rem;
+  color: black;
+  position: relative;
+  z-index: 5;
+  transition: color 0.5s;
+}
+
+.ending {
+  font-family: "Poiret One", cursive;
+  background-color: #f7f6f6;
+  height: max-content;
+  padding: 1.2rem;
+}
+.ending .ending-barra {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  margin-bottom: 1.2rem;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.ending .ending-barra .ending-paginas .ending-texto {
+  text-decoration: none;
+  color: black;
+}
+.ending .ending-barra .separador {
+  margin: 0;
+  padding: 0;
+  margin: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ending .ending-parrafo {
+  margin: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +235,10 @@
   font-family: "Poiret One", cursive;
   font-family: "Kristi", cursive;
   margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .barra-mobile {
@@ -422,195 +616,6 @@
   margin-top: 2rem;
 }
 
-.newsletter {
-  height: max-content;
-  width: 100%;
-  font-family: "Poiret One", cursive;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid black;
-  padding: 2% 0 1% 0;
-}
-.newsletter .newsletter-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  margin-bottom: 2%;
-}
-.newsletter .newsletter-div .newsletter-title {
-  display: flex;
-  justify-content: center;
-  font-size: 2.5rem;
-  margin-bottom: 1.2rem;
-  align-items: center;
-}
-.newsletter .newsletter-div .newsletter-parrafo {
-  display: flex;
-  width: auto;
-  max-width: 90%;
-  margin-bottom: 0.5;
-  font-size: 1.3rem;
-}
-.newsletter .newsletter-div .newsletter-subscribe {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.newsletter .newsletter-div .newsletter-subscribe .form-label {
-  background-color: white;
-  margin: 0.8rem;
-  border-radius: 5px;
-  border-top: #a1aba1;
-  border-left: #a1aba1;
-  border-right: #efd7c7;
-  height: 2rem;
-  width: 20vw;
-  min-width: fit-content;
-  font-family: "Poiret One", cursive;
-  font-weight: bolder;
-  padding-left: 2%;
-}
-.newsletter .newsletter-div .newsletter-subscribe .form-submit {
-  background-color: #efd7c7;
-  margin: 10px;
-  width: 6vw;
-  min-width: fit-content;
-  height: 2rem;
-  border-radius: 5px;
-  color: white;
-  border-color: #efd7c7;
-  font-family: "Poiret One", cursive;
-  font-weight: bolder;
-}
-.newsletter .newsletter-div .newsletter-subscribe .form-submit:hover {
-  background-color: #e4c3ae;
-}
-.newsletter .map-container {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  margin: 2% 0 4% 0;
-}
-.newsletter .map-container .newsletter-map {
-  width: 95%;
-  height: 20vh;
-  z-index: -1;
-  border-radius: 10px;
-}
-
-.footer {
-  background-color: #ebebeb;
-  height: 15rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-}
-.footer .footer-div .footer-logo {
-  width: 9.7rem;
-  height: 9.7rem;
-}
-.footer .footer-div2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.footer .footer-div2 .footer-name {
-  display: flex;
-  font-family: "Poiret One", cursive;
-  font-size: 2rem;
-  justify-content: center;
-  margin-bottom: 1.2rem;
-}
-.footer .footer-div2 .barra-redes {
-  display: flex;
-  justify-content: center;
-}
-.footer .footer-div2 .barra-redes .footer-img {
-  font-size: 2rem;
-  line-height: 4rem;
-  width: 100%;
-  height: 4.8rem;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
-  margin: 5px;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.5s;
-}
-.footer .footer-div2 .barra-redes .footer-img:hover::after {
-  top: 0;
-}
-.footer .footer-div2 .barra-redes .footer-img:hover .footer-img {
-  color: white;
-}
-.footer .footer-div2 .barra-redes .footer-img:hover {
-  transform: translateY(-10px);
-}
-.footer .footer-div2 .barra-redes .footer-img::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: -90px;
-  left: 0;
-  background: linear-gradient(-45deg, #a1aba1, #efd7c7);
-  position: absolute;
-  transition: 0.5s;
-}
-.footer .footer-div2 .barra-redes .footer-img img {
-  width: 4.8rem;
-  height: 4.8rem;
-  padding: 0.6rem;
-  color: black;
-  position: relative;
-  z-index: 5;
-  transition: color 0.5s;
-}
-
-.ending {
-  font-family: "Poiret One", cursive;
-  background-color: #f7f6f6;
-  height: max-content;
-  padding: 1.2rem;
-}
-.ending .ending-barra {
-  display: flex;
-  gap: 0.5rem;
-  font-size: 1.2rem;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  list-style: none;
-  margin-bottom: 1.2rem;
-  padding: 0;
-  flex-wrap: wrap;
-}
-.ending .ending-barra .ending-paginas .ending-texto {
-  text-decoration: none;
-  color: black;
-}
-.ending .ending-barra .separador {
-  margin: 0;
-  padding: 0;
-  margin: 0.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.ending .ending-parrafo {
-  margin: 1.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .prod-banner {
   background-color: #a1c0ce;
   height: 10rem;
@@ -735,6 +740,9 @@
   color: white;
 }
 
+.product-sale {
+  scroll-margin-top: 8rem;
+}
 .product-sale .prod-banner2 {
   display: flex;
   height: 7rem;
@@ -1091,12 +1099,15 @@
   .barra-mobile .barra-nav-mobile .barra-title {
     margin-left: 0;
   }
+  .banner {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
   .banner .banner-title {
     display: flex;
-    flex-direction: column;
-  }
-  .banner .banner-title p {
     font-size: 7rem;
+    text-align: center;
   }
   .temporada {
     display: flex;
@@ -1106,6 +1117,10 @@
   }
   .temporada .temporada-title {
     font-size: 3.8rem;
+    text-align: center;
+  }
+  .temporada .temporada-parrafo {
+    text-align: center;
   }
   .temporada .temporada-fotos .temporada-container {
     width: 100vw;
@@ -1132,6 +1147,7 @@
   }
   .newsletter .newsletter-div {
     margin-bottom: 1rem;
+    text-align: center;
   }
   .footer {
     height: auto;
@@ -1157,10 +1173,12 @@
   }
   .ending {
     padding: 1rem;
+    text-align: center;
   }
   .ending .ending-barra {
     gap: 0.2rem;
     margin-bottom: 0.5rem;
+    text-align: center;
   }
   .product .product-container {
     flex-direction: column;
@@ -1222,8 +1240,14 @@
     display: flex;
     flex-direction: column;
   }
+  .historia .historia-parrafo-img p {
+    padding: 3%;
+  }
   .historia .historia-parrafo-img .h-i-4 {
     overflow: hidden;
+  }
+  .historia .historia-logo .logo-descripcion {
+    padding: 3%;
   }
 }
 @media (max-width: 768px) {
