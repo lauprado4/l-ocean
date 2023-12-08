@@ -911,4 +911,33 @@ html{
     }
 }
 
+//-------------------- ERROR404.HTML --------------------// 
+
+body {
+    background-color: white;
+    color: #333;
+    margin: 0;
+}
+
+.error-titulo {
+    font-size: 2em;
+    color: #555;
+}
+
+.error-parrafo {
+    font-size: 1.2em;
+    color: #777;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+
 @import "./partials/_queries.scss";
