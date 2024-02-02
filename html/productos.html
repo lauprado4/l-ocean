@@ -15,12 +15,24 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- ICONO WEB -->
     <link rel="shortcut icon" href="../assets/img/logonegro.png" type="image/x-icon" alt="Imagen del logo">
     <!-- FUENTES -->
     <script src="https://kit.fontawesome.com/b2adeb8249.js" crossorigin="anonymous"></script>
     <!-- TITULO -->
     <title>Productos - L'Ocean</title>
+    <!-- SWEET ALERT -->
+    <script src="
+        https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.all.min.js" defer>
+    </script>
+    <!-- TOASTIFY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+    <!-- JS -->
+    <script src="../js/main.js" defer></script>
+    <script src="../js/login.js" defer></script>
+   
 </head>
 
 <body>
@@ -86,12 +98,18 @@
             </div>
             <div class="barra-iconos2">
                 <div class="barra-buscador">
-                    <input class="buscador" name="buscar" type="text" placeholder="Buscar">
+                    <input id="inputFilter" class="buscador" name="buscar" type="text" placeholder="Buscar">
                     <button><img src="../assets/img/glass.svg" alt="Icono de Lupa"></button>
                 </div>
-                <img src="../assets/img/heart.svg" alt="Icono de Favorito">
-                <img src="../assets/img/cart.svg" alt="Icono de Carrito">
-                <img src="../assets/img/user.svg" alt="Icono de Usuario">
+                <button class="btn-header" id="boton-favoritos-total">
+                    <img src="../assets/img/heart.svg" alt="Icono de Favorito" title="Favoritos">
+                </button>
+                <button class="btn-header" id="boton-carrito-total">
+                    <img  src="../assets/img/cart.svg" alt="Icono de Carrito" title="Carrito">
+                </button>
+                <button class="btn-header" id="boton-usuario">
+                    <img src="../assets/img/user.svg" alt="Icono de Usuario" title="Usuario">
+                </button>
             </div>
         </div>
 
@@ -115,10 +133,61 @@
             </ul>
         </div>
         </nav>
+        <!-- MODAL -->
+        <div class="modal" id="carritoModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title"><i class="fa-solid fa-cart-shopping"></i> Carrito de compras:</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <table class="table table-hover">
+                            <thead>
+                                <th>Cantidad</th>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                            </thead>
+                            <tbody id="modalListProducts">
+                                
+                            </tbody>
+                            <tfoot>
+                                <tr></tr>
+                            </tfoot>
+                      </table>
+                      <hr>
+                      <p class="text-right">Total $<span id="sumaTotalCarrito">${}</span></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button id="boton-finalizar-compra" type="button" class="btn btn-primary">Comprar</button>
+                  </div>
+                </div>
+              </div>
+          </div>
     </header>
 
     <!-- INICIO MAIN -->
     <main>
+        <!-- USUARIO -->
+        <div class="user" id="userModal">
+                <form  class="user-login" id="user-login">
+                    <h2 class="user-title">LOGIN</h2>
+                    <span class="material-symbols-outlined user-btn-close" id="user-btn-close" >cancel</span>
+                    <label class="user-label" for="">
+                        <span class="material-symbols-outlined">person</span>
+                        <input type="text" id="user-name" placeholder="Usuario" autocomplete="off">
+                    </label>
+                    <label class="user-label" for="">
+                        <span class="material-symbols-outlined">lock</span>
+                        <input type="password" id="user-password" placeholder="Contraseña">
+                    </label>
+                    <a href="#" class="user-link">¿Olvidaste tu contraseña?</a>
+                    <button id="user-button">Acceder</button>
+                </form>
+        </div>
+        <!-- CONTACT -->
         <div class="contact">
             <a href="https://www.whatsapp.com" class="contact-img">
                 <img src="../assets/img/whatsapp2.svg" title="Escríbenos" alt="Imagen de Whatsapp para contactar">
@@ -128,94 +197,18 @@
         <section class="prod-banner">
             <h1 class="prod-banner-title">Woman</h1>
         </section>
-
+        <section class="prod-filter">
+            <select name="Categoria" id="prodFilter" class="prod-filter-name">
+                <option id="option1" value="1">Mostrar todo</option>
+                <option id="option2" value="2">Partes de arriba</option>
+                <option id="option3" value="3">Partes de abajo</option>
+                <option id="option4" value="4">Precio más alto</option>
+                <option id="option5" value="5">Precio más bajo</option>
+            </select>
+        </section>
         <!-- INICIO DE LISTA DE PRODUCTOS -->
         <section class="product">
-            <div class="product-container">
-                <a href="#" class="product-link">
-                    <img class="product-img" src="../assets/img/blusa.webp" alt="Imagen de producto de la blusa X">
-                    <div class="product-item">
-                        <p class="product-name">Blusa
-                        <p class="product-price">$16.499</p>
-                    </div>
-                </a>
-                <a href="#" class="product-link">
-                    <img class="product-img" src="../assets/img/jean.jpg" alt="Imagen de producto del jean X">
-                    <div class="product-item">
-                        <p class="product-name">Jean</p>
-                        <p class="product-price">$27.899</p>
-                    </div>
-                </a>
-                <a href="#" class="product-link">
-                    <img class="product-img" src="../assets/img/camisa.jpeg" alt="Imagen de producto de la camisa X">
-                    <div class="product-item">
-                        <p class="product-name">Camisa</p>
-                        <p class="product-price">$21.299</p>
-                    </div>
-                </a>
-                <a href="#" class="product-link">
-                    <img class="product-img" src="../assets/img/top.jpg" alt="Imagen de producto del top X">
-                    <div class="product-item">
-                        <p class="product-name">Top</p>
-                        <p class="product-price">$15.899</p>
-                    </div>
-                </a>
-                <a href="#" class="product-link">
-                    <img class="product-img" src="../assets/img/buzo.jpeg" alt="Imagen de producto del buzo X">
-                    <div class="product-item">
-                        <p class="product-name">Buzo</p>
-                        <p class="product-price">$23.849</p>
-                    </div>
-                </a>
-                <a href="#" class="product-link">
-                    <img class="product-img" src="../assets/img/pollera.jpg" alt="Imagen de producto de la pollera X">
-                    <div class="product-item">
-                        <p class="product-name">Pollera</p>
-                        <p class="product-price">$14.199</p>
-                    </div>
-                </a>
-                <a href="#" class="product-link">
-                    <img class="product-img" src="../assets/img/remera.jpg" alt="Imagen de producto de la remera X">
-                    <div class="product-item">
-                        <p class="product-name">Remera</p>
-                        <p class="product-price">$11.999</p>
-                    </div>
-                </a>
-                <a href="#" class="product-link">
-                    <img class="product-img" src="../assets/img/overol.jpg" alt="Imagen de producto del overol X">
-                    <div class="product-item">
-                        <p class="product-name">Overol</p>
-                        <p class="product-price">$35.099</p>
-                    </div>
-                </a>
-                <a href="#" class="product-link">
-                    <img class="product-img" src="../assets/img/short.webp" alt="Imagen de producto del short X">
-                    <div class="product-item">
-                        <p class="product-name">Short</p>
-                        <p class="product-price">$14.999</p>
-                    </div>
-                </a>
-                <a href="#" class="product-link">
-                    <img class="product-img" src="../assets/img/pantalon.jpg" alt="Imagen de producto del pantalon X">
-                    <div class="product-item">
-                        <p class="product-name">Pantalon</p>
-                        <p class="product-price">$30.499</p>
-                    </div>
-                </a>
-                <a href="#" class="product-link">
-                    <img class="product-img" src="../assets/img/sweater.jpg" alt="Imagen de producto del sweater X">
-                    <div class="product-item">
-                        <p class="product-name">Sueter</p>
-                        <p class="product-price">$24.999</p>
-                    </div>
-                </a>
-                <a href="#" class="product-link">
-                    <img class="product-img" src="../assets/img/vestido.jpg" alt="Imagen de producto del vestido X">
-                    <div class="product-item">
-                        <p class="product-name">Vestido</p>
-                        <p class="product-price">$29.999</p>
-                    </div>
-                </a>
+           <div id="product-list" class="product-container">
             </div>
 
             <!-- INICIO BARRA DE PAGINAS -->
@@ -326,6 +319,8 @@
             <p class="ending-parrafo">© 2024 L'Ocean. All rights reserved.</p>
         </section>
     </footer>
+    
+    <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>

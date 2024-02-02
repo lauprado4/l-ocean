@@ -15,12 +15,23 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- ICONO WEB -->
     <link rel="shortcut icon" href="../assets/img/logonegro.png" type="image/x-icon" alt="Imagen del logo">
     <!-- FUENTES -->
     <script src="https://kit.fontawesome.com/b2adeb8249.js" crossorigin="anonymous"></script>
     <!-- TITULO -->
     <title>Sale - L'Ocean</title>
+     <!-- SWEET ALERT -->
+     <script src="
+     https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.all.min.js" defer>
+    </script>
+    <!-- TOASTIFY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+    <!-- JS -->
+    <script src="../js/main.js" defer></script>
+    <script src="../js/login.js" defer></script>
 </head>
 
 <body>
@@ -89,9 +100,15 @@
                     <input class="buscador" name="buscar" type="text" placeholder="Buscar">
                     <button><img src="../assets/img/glass.svg" alt="Icono de Lupa"></button>
                 </div>
-                <img src="../assets/img/heart.svg" alt="Icono de Favorito">
-                <img src="../assets/img/cart.svg" alt="Icono de Carrito">
-                <img src="../assets/img/user.svg" alt="Icono de Usuario">
+                <button class="btn-header" id="boton-favoritos-total">
+                    <img src="../assets/img/heart.svg" alt="Icono de Favorito" title="Favoritos">
+                </button>
+                <button class="btn-header" id="boton-carrito-total">
+                    <img  src="../assets/img/cart.svg" alt="Icono de Carrito" title="Carrito">
+                </button>
+                <button class="btn-header" id="boton-usuario">
+                    <img src="../assets/img/user.svg" alt="Icono de Usuario" title="Usuario">
+                </button>
             </div>
         </div>
         <div class="barra-secundaria">
@@ -114,10 +131,58 @@
             </ul>
         </div>
         </nav>
+        <!-- MODAL -->
+        <div class="modal" id="carritoModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title"><i class="fa-solid fa-cart-shopping"></i> Carrito de compras:</h2>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                    <thead>
+                        <th>Cantidad</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                    </thead>
+                    <tbody id="modalListProducts">
+                      <tr>
+                          <td>2</td>
+                          <td>Remera</td>
+                          <td>$24.000</td>
+                      </tr>
+                    </tbody>
+                </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </header>
 
     <!-- INICIO MAIN -->
     <main>
+         <!-- USUARIO -->
+         <div class="user" id="userModal">
+            <form  class="user-login" id="user-login">
+                <h2 class="user-title">LOGIN</h2>
+                <span class="material-symbols-outlined user-btn-close" id="user-btn-close" >cancel</span>
+                <label class="user-label" for="">
+                    <span class="material-symbols-outlined">person</span>
+                    <input type="text" id="user-name" placeholder="Usuario" autocomplete="off">
+                </label>
+                <label class="user-label" for="">
+                    <span class="material-symbols-outlined">lock</span>
+                    <input type="password" id="user-password" placeholder="Contraseña">
+                </label>
+                <a href="#" class="user-link">¿Olvidaste tu contraseña?</a>
+                <button id="user-button">Acceder</button>
+            </form>
+        </div>
         <!-- CONTACTO -->
         <div class="contact">
             <a href="https://www.whatsapp.com" class="contact-img">
@@ -148,8 +213,8 @@
                         <img class="product-img-sale" src="../assets/img/vestido.webp" alt="Imagen de producto del vestido X">
                         <div class="product-box-sale">
                             <div class="product-item-sale">
-                                <p class="product-name-sale">
-                                <p class="product-price-sale">$16.499</p>
+                                <p class="product-name-sale">Vestido Sunrise</p>
+                                <p class="product-price-sale">$12.499</p>
                             </div>
                             <div class="product-action-sale">
                                 <a href="#" class="product-cart">
@@ -169,8 +234,8 @@
                         <img class="product-img-sale" src="../assets/img/vestido3.jpg" alt="Imagen de producto del vestido X">
                         <div class="product-box-sale">
                             <div class="product-item-sale">
-                                <p class="product-name-sale"></p>
-                                <p class="product-price-sale">$27.899</p>
+                                <p class="product-name-sale">Vestido Sunrise</p>
+                                <p class="product-price-sale">$22.899</p>
                             </div>
                             <div class="product-action-sale">
                                 <a href="#" class="product-cart">
@@ -190,8 +255,8 @@
                         <img class="product-img-sale" src="../assets/img/vestido4.webp" alt="Imagen de producto del vestido X">
                         <div class="product-box-sale">
                             <div class="product-item-sale">
-                                <p class="product-name-sale"></p>
-                                <p class="product-price-sale">$21.299</p>
+                                <p class="product-name-sale">Vestido Sunrise</p>
+                                <p class="product-price-sale">$18.299</p>
                             </div>
                             <div class="product-action-sale">
                                 <a href="#" class="product-cart">
@@ -211,8 +276,8 @@
                         <img class="product-img-sale" src="../assets/img/vestido.jpg" alt="Imagen de producto del vestido X">
                         <div class="product-box-sale">
                             <div class="product-item-sale">
-                                <p class="product-name-sale"></p>
-                                <p class="product-price-sale">$15.899</p>
+                                <p class="product-name-sale">Vestido Sunrise</p>
+                                <p class="product-price-sale">$11.899</p>
                             </div>
                             <div class="product-action-sale">
                                 <a href="#" class="product-cart">
@@ -235,8 +300,8 @@
                         <img class="product-img-sale" src="../assets/img/pollera2.webp" alt="Imagen de producto de la pollera X">
                         <div class="product-box-sale">
                             <div class="product-item-sale">
-                                <p class="product-name-sale"></p>
-                                <p class="product-price-sale">$23.849</p>
+                                <p class="product-name-sale">Pollera California</p>
+                                <p class="product-price-sale">$20.699</p>
                             </div>
                             <div class="product-action-sale">
                                 <a href="#" class="product-cart">
@@ -256,7 +321,7 @@
                         <img class="product-img-sale" src="../assets/img/pollera3.webp" alt="Imagen de producto de la pollera X">
                         <div class="product-box-sale">
                             <div class="product-item-sale">
-                                <p class="product-name-sale"></p>
+                                <p class="product-name-sale">Pollera California</p>
                                 <p class="product-price-sale">$14.199</p>
                             </div>
                             <div class="product-action-sale">
@@ -277,8 +342,8 @@
                         <img class="product-img-sale" src="../assets/img/pollera4.jpg" alt="Imagen de producto de la pollera X">
                         <div class="product-box-sale">
                             <div class="product-item-sale">
-                                <p class="product-name-sale"></p>
-                                <p class="product-price-sale">$11.999</p>
+                                <p class="product-name-sale">Pollera California</p>
+                                <p class="product-price-sale">$9.999</p>
                             </div>
                             <div class="product-action-sale">
                                 <a href="#" class="product-cart">
@@ -298,8 +363,8 @@
                         <img class="product-img-sale" src="../assets/img/pollera5.webp" alt="Imagen de producto de la pollera X">
                         <div class="product-box-sale">
                             <div class="product-item-sale">
-                                <p class="product-name-sale"></p>
-                                <p class="product-price-sale">$35.099</p>
+                                <p class="product-name-sale">Pollera California</p>
+                                <p class="product-price-sale">$19.399</p>
                             </div>
                             <div class="product-action-sale">
                                 <a href="#" class="product-cart">
@@ -322,7 +387,7 @@
                         <img class="product-img-sale" src="../assets/img/arriba.jpg" alt="Imagen de producto del tapado X">
                         <div class="product-box-sale">
                             <div class="product-item-sale">
-                                <p class="product-name-sale"></p>
+                                <p class="product-name-sale">Nombre 1</p>
                                 <p class="product-price-sale">$14.999</p>
                             </div>
                             <div class="product-action-sale">
@@ -344,8 +409,8 @@
                         <img class="product-img-sale" src="../assets/img/arriba2.jpg" alt="Imagen de producto del tapado X">
                         <div class="product-box-sale">
                             <div class="product-item-sale">
-                                <p class="product-name-sale"></p>
-                                <p class="product-price-sale">$30.499</p>
+                                <p class="product-name-sale">Nombre 2</p>
+                                <p class="product-price-sale">$25.499</p>
                             </div>
                             <div class="product-action-sale">
                                 <a href="#" class="product-cart">
@@ -366,8 +431,8 @@
                         <img class="product-img-sale" src="../assets/img/arriba3.jpg" alt="Imagen de producto del tapado X">
                         <div class="product-box-sale">
                             <div class="product-item-sale">
-                                <p class="product-name-sale"></p>
-                                <p class="product-price-sale">$24.999</p>
+                                <p class="product-name-sale">Nombre 3</p>
+                                <p class="product-price-sale">$22.999</p>
                             </div>
                             <div class="product-action-sale">
                                 <a href="#" class="product-cart">
@@ -388,7 +453,7 @@
                         <img class="product-img-sale" src="../assets/img/arriba4.jpg" alt="Imagen de producto de la remera X">
                         <div class="product-box-sale">
                             <div class="product-item-sale">
-                                <p class="product-name-sale"></p>
+                                <p class="product-name-sale">Nombre 4</p>
                                 <p class="product-price-sale">$29.999</p>
                             </div>
                             <div class="product-action-sale">

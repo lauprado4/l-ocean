@@ -89,9 +89,15 @@
                     <input class="buscador" name="buscar" type="text" placeholder="Buscar">
                     <button><img src="../assets/img/glass.svg" alt="Icono de Lupa"></button>
                 </div>
-                <img src="../assets/img/heart.svg" alt="Icono de Favorito">
-                <img src="../assets/img/cart.svg" alt="Icono de Carrito">
-                <img src="../assets/img/user.svg" alt="Icono de Usuario">
+                <button class="btn-header" id="boton-favoritos-total">
+                    <img src="../assets/img/heart.svg" alt="Icono de Favorito" title="Favoritos">
+                </button>
+                <button class="btn-header" id="boton-carrito-total">
+                    <img  src="../assets/img/cart.svg" alt="Icono de Carrito" title="Carrito">
+                </button>
+                <button class="btn-header" id="boton-usuario">
+                    <img src="../assets/img/user.svg" alt="Icono de Usuario" title="Usuario">
+                </button>
             </div>
         </div>
         <div class="barra-secundaria">
@@ -118,6 +124,31 @@
 
     <!-- INICIO MAIN -->
     <main>
+         <!-- USUARIO -->
+         <div class="user" id="userModal">
+            <form  class="user-login" id="user-login">
+                <h2 class="user-title">LOGIN</h2>
+                <span class="material-symbols-outlined user-btn-close" id="user-btn-close" >cancel</span>
+                <label class="user-label" for="">
+                    <span class="material-symbols-outlined">person</span>
+                    <input type="text" id="user-name" placeholder="Usuario" autocomplete="off">
+                </label>
+                <label class="user-label" for="">
+                    <span class="material-symbols-outlined">lock</span>
+                    <input type="password" id="user-password" placeholder="Contraseña">
+                </label>
+                <a href="#" class="user-link">¿Olvidaste tu contraseña?</a>
+                <button id="user-button">Acceder</button>
+            </form>
+        </div>
+
+         <!-- CONTACT -->
+         <div class="contact">
+            <a href="https://www.whatsapp.com" class="contact-img">
+                <img src="../assets/img/whatsapp2.svg" title="Escríbenos" alt="Imagen de Whatsapp para contactar">
+            </a>
+        </div>
+        
         <!-- SECCION HISTORIA -->
         <section class="historia-section">
             <h1 class="historia-title">
