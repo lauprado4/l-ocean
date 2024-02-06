@@ -199,10 +199,13 @@ html{
                 height: 3rem;
                 border-color: white;
                 padding: 10px;
-                background-color: $color-secundario ;
+                background-color:transparent;
                 font-size: 1.2rem;
                 font-weight: bold;
                 color: white;
+            }
+            ::placeholder{
+                color: white
             }
 
             button {
@@ -211,7 +214,7 @@ html{
                 height: 3rem;
                 width: 50px;
                 padding: 2px;
-                background-color: $color-secundario;
+                background-color: transparent;
 
                 &:hover {
                     background-color: #d6b49e;
@@ -219,15 +222,21 @@ html{
             }
         }
         .btn-header{
-            background-color: $color-secundario;
-            border-color: white;
-            border-radius: 30%;
+            background-color: transparent;
+            border-color: transparent;
+            border-radius: 20%;
+            // width: fit-content;
+            // padding: 2px;
 
             img {
                 font-size: 5rem;
                 height: 2.5rem;
                 color: black;
             }
+        }
+        .session-username{
+            color: white;
+            font-size: 2rem;
         }
         
     }
@@ -542,6 +551,8 @@ html{
     }
 }
 
+
+
 //SECCION BANNER
 .prod-banner{
     background-color: #a1c0ce ;
@@ -629,11 +640,17 @@ html{
                     
                     .product-cart, .product-wishlist{
                         border-radius: 30%;
-                        border-color:white ;
+                        border-color:transparent;
+                        background-color: transparent;
                         width: 2.5rem;
                         height: 2.5rem;
+                        
                         img{
                             height: 2rem;
+                        }
+
+                        &:hover{
+                            transform: scale(1.2);
                         }
                     }
                 }

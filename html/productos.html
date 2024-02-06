@@ -96,7 +96,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="barra-iconos2">
+            <div class="barra-iconos2" id="barra-iconos2">
                 <div class="barra-buscador">
                     <input id="inputFilter" class="buscador" name="buscar" type="text" placeholder="Buscar">
                     <button><img src="../assets/img/glass.svg" alt="Icono de Lupa"></button>
@@ -133,7 +133,8 @@
             </ul>
         </div>
         </nav>
-        <!-- MODAL -->
+        
+        <!-- MODAL CARRITO -->
         <div class="modal" id="carritoModal" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -166,6 +167,21 @@
                 </div>
               </div>
           </div>
+
+          <!-- MODAL USER -->
+          <div class="modal user-login" id="loggedModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalBasicLabel">Cuenta</h5>
+                  <button type="button" class="btn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="user-body"></div>
+                  <button onclick="location.href" type="button" class="btn btn-primary" id="boton-cerrar-sesion">Cerrar sesión</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </header>
 
     <!-- INICIO MAIN -->
@@ -184,26 +200,30 @@
                         <input type="password" id="user-password" placeholder="Contraseña">
                     </label>
                     <a href="#" class="user-link">¿Olvidaste tu contraseña?</a>
-                    <button id="user-button">Acceder</button>
+                    <button onclick="location.href" id="user-button">Acceder</button>
                 </form>
         </div>
+
         <!-- CONTACT -->
         <div class="contact">
             <a href="https://www.whatsapp.com" class="contact-img">
                 <img src="../assets/img/whatsapp2.svg" title="Escríbenos" alt="Imagen de Whatsapp para contactar">
             </a>
         </div>
+
         <!-- BANNER -->
         <section class="prod-banner">
             <h1 class="prod-banner-title">Woman</h1>
         </section>
+
+        <!-- FILTRO -->
         <section class="prod-filter">
             <select name="Categoria" id="prodFilter" class="prod-filter-name">
-                <option id="option1" value="1">Mostrar todo</option>
-                <option id="option2" value="2">Partes de arriba</option>
-                <option id="option3" value="3">Partes de abajo</option>
-                <option id="option4" value="4">Precio más alto</option>
-                <option id="option5" value="5">Precio más bajo</option>
+                <option value="All">Mostrar todo</option>
+                <option value="UpperParts">Partes de arriba</option>
+                <option value="LowerParts">Partes de abajo</option>
+                <option value="HighestPrice">Precio más alto</option>
+                <option value="LowestPrice">Precio más bajo</option>
             </select>
         </section>
         <!-- INICIO DE LISTA DE PRODUCTOS -->

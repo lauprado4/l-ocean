@@ -30,7 +30,7 @@
     <!-- TOASTIFY -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
     <!-- JS -->
-    <script src="./js/login.js" defer></script>
+    <!-- <script src="./js/login.js" defer></script> -->
     
 </head>
 
@@ -95,7 +95,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="barra-iconos2">
+            <div class="barra-iconos2" id="barra-iconos2">
                 <div class="barra-buscador">
                     <input class="buscador" name="buscar" type="text" placeholder="Buscar">
                     <button><img src="./assets/img/glass.svg" alt="Icono de Lupa"></button>
@@ -135,33 +135,53 @@
             <video class="bg-video" src="./assets/video/playabg.mp4" type="video/mp4" autoplay loop></video>
             <div class="capa"></div>
         </div>
-        <!-- MODAL -->
+
+        <!-- MODAL CARRITO -->
         <div class="modal" id="carritoModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title"><i class="fa-solid fa-cart-shopping"></i> Carrito de compras:</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <table class="table table-hover">
+                            <thead>
+                                <th>Cantidad</th>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                            </thead>
+                            <tbody id="modalListProducts">
+                                
+                            </tbody>
+                            <tfoot>
+                                <tr></tr>
+                            </tfoot>
+                      </table>
+                      <hr>
+                      <p class="text-right">Total $<span id="sumaTotalCarrito">${}</span></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button id="boton-finalizar-compra" type="button" class="btn btn-primary">Comprar</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <!-- MODAL USER -->
+          <div class="modal user-login" id="loggedModal" tabindex="-1">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h2 class="modal-title"><i class="fa-solid fa-cart-shopping"></i> Carrito de compras:</h2>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h5 class="modal-title" id="modalBasicLabel">Cuenta</h5>
+                  <button type="button" class="btn-close" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <table class="table table-hover">
-                    <thead>
-                        <th>Cantidad</th>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                    </thead>
-                    <tbody id="modalListProducts">
-                      <tr>
-                          <td>2</td>
-                          <td>Remera</td>
-                          <td>$24.000</td>
-                      </tr>
-                    </tbody>
-                </table>
-                </div>
+                <div class="modal-body"></div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary">Comprar</button>
+                  <button type="button" class="btn btn-secondary">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Cerrar sesión</button>
                 </div>
               </div>
             </div>

@@ -392,9 +392,12 @@ html {
   height: 3rem;
   border-color: white;
   padding: 10px;
-  background-color: #efd7c7;
+  background-color: transparent;
   font-size: 1.2rem;
   font-weight: bold;
+  color: white;
+}
+.barra-principal .barra-iconos2 .barra-buscador ::placeholder {
   color: white;
 }
 .barra-principal .barra-iconos2 .barra-buscador button {
@@ -403,20 +406,24 @@ html {
   height: 3rem;
   width: 50px;
   padding: 2px;
-  background-color: #efd7c7;
+  background-color: transparent;
 }
 .barra-principal .barra-iconos2 .barra-buscador button:hover {
   background-color: #d6b49e;
 }
 .barra-principal .barra-iconos2 .btn-header {
-  background-color: #efd7c7;
-  border-color: white;
-  border-radius: 30%;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 20%;
 }
 .barra-principal .barra-iconos2 .btn-header img {
   font-size: 5rem;
   height: 2.5rem;
   color: black;
+}
+.barra-principal .barra-iconos2 .session-username {
+  color: white;
+  font-size: 2rem;
 }
 
 .barra-secundaria {
@@ -761,12 +768,16 @@ html {
 }
 .product .product-container .product-box .product-action .product-cart, .product .product-container .product-box .product-action .product-wishlist {
   border-radius: 30%;
-  border-color: white;
+  border-color: transparent;
+  background-color: transparent;
   width: 2.5rem;
   height: 2.5rem;
 }
 .product .product-container .product-box .product-action .product-cart img, .product .product-container .product-box .product-action .product-wishlist img {
   height: 2rem;
+}
+.product .product-container .product-box .product-action .product-cart:hover, .product .product-container .product-box .product-action .product-wishlist:hover {
+  transform: scale(1.2);
 }
 .product .pagination {
   margin-top: 1.2rem;

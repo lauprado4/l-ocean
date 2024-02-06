@@ -7,23 +7,31 @@ const prodFilter = document.querySelector("#prodFilter")
 const botonFav = document.querySelector("#boton-fav");
 const carritoInfo = document.querySelector(".product-item");
 const modalListProducts = document.querySelector("#modalListProducts");
-const botonFinalizarCompra =document.querySelector("#boton-finalizar-compra");
+const botonFinalizarCompra = document.querySelector("#boton-finalizar-compra");
+
+
+const option1 = document.querySelector("#option1");
+const option2 = document.querySelector("#option2");
+const option3 = document.querySelector("#option3");
+const option4 = document.querySelector("#option4");
+const option5 = document.querySelector("#option5");
+
 let carrito = [];
 let totalCarrito = carrito.map((carrito) => carrito.name);
 
 const catalogo = [
-    {id: 1, name:"Blusa", price:"16.499", img:"../assets/img/blusa.webp"},
-    {id: 2, name:"Jean", price:"27.899", img:"../assets/img/jean.jpg"},
-    {id: 3, name:"Camisa", price:"21.299", img:"../assets/img/camisa.jpeg"},
-    {id: 4, name:"Top", price:"15.899", img:"../assets/img/top.jpg"},
-    {id: 5, name:"Buzo", price:"23.849", img:"../assets/img/buzo.jpeg"},
-    {id: 6, name:"Pollera", price:"16.199", img:"../assets/img/pollera.jpg"},
-    {id: 7, name:"Remera", price:"11.999", img:"../assets/img/remera.jpg"},
-    {id: 8, name:"Overol", price:"35.099", img:"../assets/img/overol.jpg"},
-    {id: 9, name:"Short", price:"14.999", img:"../assets/img/short.webp"},
-    {id: 10, name:"Pantalon", price:"30.499", img:"../assets/img/pantalon.jpg"},
-    {id: 11, name:"Sueter", price:"24.999", img:"../assets/img/sueter.jpg"},
-    {id: 12, name:"Vestido", price:"29.999", img:"../assets/img/vestido.jpg"},
+    {id: 1, name:"Blusa", price:"16.499", img:"../assets/img/blusa.webp", category:"arriba"},
+    {id: 2, name:"Jean", price:"27.899", img:"../assets/img/jean.jpg", category:"abajo"},
+    {id: 3, name:"Camisa", price:"21.299", img:"../assets/img/camisa.jpeg", category:"arriba"},
+    {id: 4, name:"Top", price:"15.899", img:"../assets/img/top.jpg", category:"arriba"},
+    {id: 5, name:"Buzo", price:"23.849", img:"../assets/img/buzo.jpeg", category:"arriba"},
+    {id: 6, name:"Pollera", price:"16.199", img:"../assets/img/pollera.jpg", category:"abajo"},
+    {id: 7, name:"Remera", price:"11.999", img:"../assets/img/remera.jpg", category:"arriba"},
+    {id: 8, name:"Overol", price:"35.099", img:"../assets/img/overol.jpg", category:"arriba"},
+    {id: 9, name:"Short", price:"14.999", img:"../assets/img/short.webp", category:"abajo"},
+    {id: 10, name:"Pantalon", price:"30.499", img:"../assets/img/pantalon.jpg", category:"abajo"},
+    {id: 11, name:"Sueter", price:"24.999", img:"../assets/img/sueter.jpg", category:"arriba"},
+    {id: 12, name:"Vestido", price:"29.999", img:"../assets/img/vestido.jpg", category:"arriba"},
 ];
 
 // CARRITO DE COMPRAS
@@ -66,8 +74,7 @@ const cart = new Cart()
 botonCarritoTotal.addEventListener('click', () => {
     const list = cart.obtenerProductos();
     renderCart(list);
-
-    sumaTotalCarrito.innerText = Math.ceil(cart.obtenerSumaTotal()).toFixed(3);
+    sumaTotalCarrito.innerText = cart.obtenerSumaTotal().toFixed(3);
     modal.show()
     compraExitosa();
 })
@@ -139,23 +146,49 @@ inputFilter.addEventListener('input', (event) => {
 
 // FILTRO POR CATEGORIA
 prodFilter.addEventListener("change", (event) => {
-    if (prodFilter.value == 5){
-        catalogo.sort( (a, b) => {
+    const seleccion = event.target;
+    if (seleccion == "Precio más bajo"){
+        const filtroCategoria = catalogo.sort( (a, b) => {
             if(a.price < b.price){return -1};
             
             if(a.price > b.price){return 1};
-
+    
             return 0;
         })
+        renderProducts(filtroCategoria);
     }
-    renderProducts();
+    else if (seleccion == "Precio más alto"){
+        const filtroCategoria = catalogo.sort( (a, b) => {
+            if(a.price > b.price){return -1};
+            
+            if(a.price < b.price){return 1};
+    
+            return 0;
+        })
+        renderProducts(filtroCategoria);
+    }
+    
+}); 
+
+// FILTRO PARTES DE ARRIBA Y ABAJO
+prodFilter.addEventListener('change', (event) => {
+    const nuevoFiltro = catalogo.filter( product => product.category === "arriba");
+    renderProducts(nuevoFiltro);
 });
+
+prodFilter.addEventListener('change', (event) => {
+    const nuevoFiltro = catalogo.filter( product => product.category === "abajo");
+    renderProducts(nuevoFiltro);
+});
+
+// FILTRO MOSTRAR TODO
+
 
 // RENDERIZADO DEL CARRITO
 const renderCart = (list) => {
     modalListProducts.innerHTML = "";
     list.forEach(product => {
-        const round = (Math.ceil(product.price * product.stock)).toFixed(3);
+        const round = (product.price * product.stock).toFixed(3);
         modalListProducts.innerHTML += //html
         `
         <tr>
