@@ -11,13 +11,27 @@ const sessionUsername = document.querySelector("#session-username");
 const loggedModal = new bootstrap.Modal("#loggedModal", {});
 const userBody = document.querySelector("#user-body");
 const botonCerrarSesion = document.querySelector("#boton-cerrar-sesion");
-const username = ""
+const username = " "
 
 // INICIO DE SESION
 
+
 botonUsuario.addEventListener("click", () => {
     user.style.display = "flex";
+
+    // function noscroll(){
+    //     window.scrollTo(0,0);
+    
+    // }
+    // if(user.style.display = "flex"){
+    // window.addEventListener("scroll", noscroll);
+    // }
+    
 })
+
+// if(user.style.display = "none"){
+//     window.scroll = "true"
+// }
 
 botonLogin.addEventListener("click", (e) => {
     e.preventDefault()
@@ -45,8 +59,6 @@ botonLogin.addEventListener("click", (e) => {
 botonClose.addEventListener("click", () => {
     user.style.display = "none";
 });
-
-
 
 const sesionIniciada = () => {
     const username = JSON.parse(localStorage.getItem("usuario"));

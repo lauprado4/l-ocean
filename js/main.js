@@ -8,6 +8,11 @@ const botonFav = document.querySelector("#boton-fav");
 const carritoInfo = document.querySelector(".product-item");
 const modalListProducts = document.querySelector("#modalListProducts");
 const botonFinalizarCompra = document.querySelector("#boton-finalizar-compra");
+const upperParts = document.querySelector("#upperParts");
+const lowerParts = document.querySelector("#lowerParts");
+const lowestPrice = document.querySelector("#lowestPrice");
+const highestPrice = document.querySelector("#highestPrice");
+const botonEliminar = document.querySelector("#btn-eliminar");
 
 
 const option1 = document.querySelector("#option1");
@@ -121,11 +126,11 @@ const renderProducts = (list) => {
 const agregarCarrito = (e) => {
     const id = e.target.id;
     const encontrarProducto = catalogo.find( item => item.id == id );
-    console.table(encontrarProducto)
     
     Toastify({
         text: "Producto agregado al carrito",
         className: "success",
+        duration: 1000,
         close: true,
         style: {
           background: "linear-gradient(to right, #00b09b, #96c93d)",
@@ -144,45 +149,40 @@ inputFilter.addEventListener('input', (event) => {
     renderProducts(filtro)
 }) 
 
-// FILTRO POR CATEGORIA
-prodFilter.addEventListener("change", (event) => {
-    const seleccion = event.target;
-    if (seleccion == "Precio más bajo"){
-        const filtroCategoria = catalogo.sort( (a, b) => {
-            if(a.price < b.price){return -1};
-            
-            if(a.price > b.price){return 1};
-    
-            return 0;
-        })
-        renderProducts(filtroCategoria);
-    }
-    else if (seleccion == "Precio más alto"){
-        const filtroCategoria = catalogo.sort( (a, b) => {
-            if(a.price > b.price){return -1};
-            
-            if(a.price < b.price){return 1};
-    
-            return 0;
-        })
-        renderProducts(filtroCategoria);
-    }
-    
-}); 
-
-// FILTRO PARTES DE ARRIBA Y ABAJO
-prodFilter.addEventListener('change', (event) => {
-    const nuevoFiltro = catalogo.filter( product => product.category === "arriba");
-    renderProducts(nuevoFiltro);
-});
-
-prodFilter.addEventListener('change', (event) => {
-    const nuevoFiltro = catalogo.filter( product => product.category === "abajo");
-    renderProducts(nuevoFiltro);
-});
-
-// FILTRO MOSTRAR TODO
-
+// FILTRO POR CATEGORIAS
+function filterParts(){
+    prodFilter.addEventListener('change', () => {
+        let seleccion = prodFilter.value;
+        if (seleccion == "1"){
+            const nuevoFiltro = catalogo.filter( product => product.category == "arriba");
+        renderProducts(nuevoFiltro);
+        }
+        else if (seleccion == "2"){
+            const nuevoFiltro = catalogo.filter( product => product.category == "abajo");
+        renderProducts(nuevoFiltro);
+        }
+        else if (seleccion == "3"){
+            const filtroCategoria = catalogo.sort( (a, b) => {
+                if(a.price > b.price){return -1};
+                if(a.price < b.price){return 1};
+                return 0;
+            })
+            renderProducts(filtroCategoria);
+        }
+        else if (seleccion == "4"){
+            const filtroCategoria = catalogo.sort( (a, b) => {
+                if(a.price < b.price){return -1};
+                if(a.price > b.price){return 1};
+                return 0;
+            })
+            renderProducts(filtroCategoria);
+        }
+        else{
+            renderProducts(catalogo)
+        }    
+    });
+}
+filterParts();
 
 // RENDERIZADO DEL CARRITO
 const renderCart = (list) => {
@@ -196,9 +196,18 @@ const renderCart = (list) => {
             <td>${product.name}</td>
             <td>$${product.price}</td>
             <td>$${round}</td>
-        </tr>`
+            <td>
+            <button><span class="material-symbols-outlined user-btn-close" id="btn-eliminar">cancel</span></button>
+            </td>
+        </tr>
+        `
     })
 }
+
+// ELIMINAR PRODUCTO DEL CARRITO
+// botonEliminar.addEventListener("click", () => { 
+
+// })
 
 // BOTON FINALIZAR COMPRA
 const compraExitosa = () => {

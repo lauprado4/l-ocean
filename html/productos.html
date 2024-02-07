@@ -148,7 +148,8 @@
                                 <th>Cantidad</th>
                                 <th>Producto</th>
                                 <th>Precio</th>
-                                <th>Total</th>
+                                <th>Subtotal</th>
+                                <th></th>
                             </thead>
                             <tbody id="modalListProducts">
                                 
@@ -157,12 +158,11 @@
                                 <tr></tr>
                             </tfoot>
                       </table>
-                      <hr>
                       <p class="text-right">Total $<span id="sumaTotalCarrito">${}</span></p>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button id="boton-finalizar-compra" type="button" class="btn btn-primary">Comprar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
+                    <button id="boton-finalizar-compra" type="button" class="btn btn-primary">Finalizar compra</button>
                   </div>
                 </div>
               </div>
@@ -190,7 +190,7 @@
         <div class="user" id="userModal">
                 <form  class="user-login" id="user-login">
                     <h2 class="user-title">LOGIN</h2>
-                    <span class="material-symbols-outlined user-btn-close" id="user-btn-close" >cancel</span>
+                    <span class="material-symbols-outlined user-btn-close" id="user-btn-close">cancel</span>
                     <label class="user-label" for="">
                         <span class="material-symbols-outlined">person</span>
                         <input type="text" id="user-name" placeholder="Usuario" autocomplete="off">
@@ -219,13 +219,14 @@
         <!-- FILTRO -->
         <section class="prod-filter">
             <select name="Categoria" id="prodFilter" class="prod-filter-name">
-                <option value="All">Mostrar todo</option>
-                <option value="UpperParts">Partes de arriba</option>
-                <option value="LowerParts">Partes de abajo</option>
-                <option value="HighestPrice">Precio más alto</option>
-                <option value="LowestPrice">Precio más bajo</option>
+                <option id="showAll" value="0">Mostrar todo</option>
+                <option id="upperParts" value="1">Partes de arriba</option>
+                <option id="lowerParts" value="2">Partes de abajo</option>
+                <option id="highestPrice" value="3">Precio más alto</option>
+                <option id="lowestPrice" value="4">Precio más bajo</option>
             </select>
         </section>
+
         <!-- INICIO DE LISTA DE PRODUCTOS -->
         <section class="product">
            <div id="product-list" class="product-container">

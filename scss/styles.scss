@@ -490,8 +490,7 @@ html{
     z-index: 55;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.6);
-    
-    // scroll-behavior:smooth;
+    scroll-behavior: disabled;
     
 
     .user-login{
@@ -503,6 +502,8 @@ html{
         text-align: center;
         padding: 2.2rem 2.5rem;
         box-shadow: 0 5px 10px rgba(71, 3, 6, 0.7);
+        scroll-behavior: disabled;
+
 
         .user-title{
             color: black;
