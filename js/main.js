@@ -51,7 +51,7 @@ class Cart {
     };
 
     guardarCarrito(){
-        localStorage.setItema("carrito", JSON.stringify(this.cart));
+        localStorage.setItem("carrito", JSON.stringify(this.cart));
     }
 
     obtenerProductos(){
@@ -166,15 +166,15 @@ const renderCart = (list) => {
         </tr>
         `
 
-        const eliminarProducto = () => {
-            document.querySelectorAll(".btn-eliminar");
-            eliminarProducto.forEach(btn => {
-            btn.addEventListener("click", () => {
-                eliminarProductoDelCarrito();
-            })
-        })
-        } 
-        eliminarProducto();
+        // const eliminarProducto = () => {
+        //     document.querySelectorAll(".btn-eliminar");
+        //     eliminarProducto.forEach(btn => {
+        //     btn.addEventListener("click", () => {
+        //         eliminarProductoDelCarrito();
+        //     })
+        // })
+        // } 
+        // eliminarProducto();
     
        
         const eliminarProductoDelCarrito = (e) => {
@@ -196,11 +196,11 @@ const renderCart = (list) => {
         
         const actualizarCarrito = () => {
             renderCart(cart.obtenerProductos());
-            cantidadProducto.innerText = cart.cantidadCarrito();
-            sumaTotalCarrito.innerText = cart.obtenerSumaTotal();
+            // cantidadProducto.innerText = cart.cantidadCarrito();
+            sumaTotalCarrito.innerText = cart.obtenerSumaTotal().toFixed(3);
         };
 
-        eliminarProducto();
+        // eliminarProducto();
         
         
         
