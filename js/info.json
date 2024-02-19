@@ -1,0 +1,23 @@
+{"catalogo" : [
+    {"id": 1, "name":"Blusa", "price":"16.499", "img":"../assets/img/blusa.webp", "category":"arriba"},
+    {"id": 2, "name":"Jean", "price":"27.899", "img":"../assets/img/jean.jpg", "category":"abajo"},
+    {"id": 3, "name":"Camisa", "price":"21.299", "img":"../assets/img/camisa.jpeg", "category":"arriba"},
+    {"id": 4, "name":"Top", "price":"15.899", "img":"../assets/img/top.jpg", "category":"arriba"},
+    {"id": 5, "name":"Buzo", "price":"23.849", "img":"../assets/img/buzo.jpeg", "category":"arriba"},
+    {"id": 6, "name":"Pollera", "price":"16.199", "img":"../assets/img/pollera.jpg", "category":"abajo"},
+    {"id": 7, "name":"Remera", "price":"11.999", "img":"../assets/img/remera.jpg", "category":"arriba"},
+    {"id": 8, "name":"Overol", "price":"35.099", "img":"../assets/img/overol.jpg", "category":"arriba"},
+    {"id": 9, "name":"Short", "price":"14.999", "img":"../assets/img/short.webp", "category":"abajo"},
+    {"id": 10, "name":"Pantalon", "price":"30.499", "img":"../assets/img/pantalon.jpg", "category":"abajo"},
+    {"id": 11, "name":"Sueter", "price":"24.999", "img":"../assets/img/sueter.jpg", "category":"arriba"},
+    {"id": 12, "name":"Vestido", "price":"29.999", "img":"../assets/img/vestido.jpg", "category":"arriba"}
+],
+"categorias" : [
+    {"id": 0, "name": "Mostrar todo"},
+    {"id": 1, "name": "Partes de arriba"},
+    {"id": 2, "name": "Partes de abajo"},
+    {"id": 3, "name": "Precio más alto"},
+    {"id": 4, "name": "Precio más bajo"}
+]
+
+}

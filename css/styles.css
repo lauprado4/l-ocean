@@ -508,6 +508,28 @@ html {
   opacity: 0.2;
 }
 
+.modal {
+  font-family: "Poiret One", cursive;
+  font-size: 1.25rem;
+}
+.modal .contenedor-cantidad {
+  padding-left: 5px;
+  width: fit-content;
+}
+.modal .contenedor-cantidad .sumarCantidad, .modal .contenedor-cantidad .restarCantidad {
+  width: 20px;
+  border-color: rgba(0, 0, 0, 0.187);
+  background-color: white;
+}
+.modal .btn-eliminar {
+  cursor: pointer;
+}
+.modal .compra-total {
+  font-weight: 700;
+  position: relative;
+  left: 70%;
+}
+
 .contact {
   display: flex;
   flex-direction: column;

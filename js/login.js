@@ -10,8 +10,8 @@ const barraIconos2 = document.querySelector("#barra-iconos2");
 const sessionUsername = document.querySelector("#session-username");
 const loggedModal = new bootstrap.Modal("#loggedModal", {});
 const userBody = document.querySelector("#user-body");
-const botonCerrarSesion = document.querySelector("#boton-cerrar-sesion");
-const username = " "
+const botonCerrarSesion = document.querySelector("#boton-cerrar-sesion"); 
+const botonCerrarModalSesion = document.querySelector("#boton-cerrar-modal-sesion"); 
 
 // INICIO DE SESION
 
@@ -60,15 +60,24 @@ botonClose.addEventListener("click", () => {
     user.style.display = "none";
 });
 
+botonCerrarModalSesion.addEventListener("click", () => {
+    loggedModal.hide();
+});
+
+
+
 const sesionIniciada = () => {
     const username = JSON.parse(localStorage.getItem("usuario"));
-    botonUsuario.innerHTML = //html
-    `
-    <button class="btn-header" id="boton-usuario">
-        <a href="#" id="session-username" class="session-username">${username}</a> 
-        <img src="../assets/img/user.svg" alt="Icono de Usuario" title="Usuario">
-    </button>
-    `
+    if (username != undefined){
+        botonUsuario.innerHTML = //html
+        `
+        <button class="btn-header" id="boton-usuario">
+            <a href="#" id="session-username" class="session-username">${username}</a> 
+            <img src="../assets/img/user.svg" alt="Icono de Usuario" title="Usuario">
+        </button>
+        `  
+    }
+    
 }
 sesionIniciada();
  
@@ -80,10 +89,7 @@ if (sesionIniciada){
 
     });
     userBody.innerHTML = //html
-    `
-    <h2>Usuario: ${username}</h2>
-    
-    `
+    `<h2>Usuario: ${username}</h2> `
 }
 
 botonCerrarSesion.addEventListener("click", () => {

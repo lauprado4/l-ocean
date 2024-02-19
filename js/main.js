@@ -12,8 +12,12 @@ const upperParts = document.querySelector("#upperParts");
 const lowerParts = document.querySelector("#lowerParts");
 const lowestPrice = document.querySelector("#lowestPrice");
 const highestPrice = document.querySelector("#highestPrice");
-const botonEliminar = document.querySelector("#btn-eliminar");
+const cantidadProducto = document.querySelector(".cantidadProducto")
+const containerSumaTotal = document.querySelector("#container-suma-total") 
 
+const memoria = JSON.parse(localStorage.getItem("carrito"));
+
+let listaCatalogo = [];
 
 const option1 = document.querySelector("#option1");
 const option2 = document.querySelector("#option2");
@@ -24,20 +28,7 @@ const option5 = document.querySelector("#option5");
 let carrito = [];
 let totalCarrito = carrito.map((carrito) => carrito.name);
 
-const catalogo = [
-    {id: 1, name:"Blusa", price:"16.499", img:"../assets/img/blusa.webp", category:"arriba"},
-    {id: 2, name:"Jean", price:"27.899", img:"../assets/img/jean.jpg", category:"abajo"},
-    {id: 3, name:"Camisa", price:"21.299", img:"../assets/img/camisa.jpeg", category:"arriba"},
-    {id: 4, name:"Top", price:"15.899", img:"../assets/img/top.jpg", category:"arriba"},
-    {id: 5, name:"Buzo", price:"23.849", img:"../assets/img/buzo.jpeg", category:"arriba"},
-    {id: 6, name:"Pollera", price:"16.199", img:"../assets/img/pollera.jpg", category:"abajo"},
-    {id: 7, name:"Remera", price:"11.999", img:"../assets/img/remera.jpg", category:"arriba"},
-    {id: 8, name:"Overol", price:"35.099", img:"../assets/img/overol.jpg", category:"arriba"},
-    {id: 9, name:"Short", price:"14.999", img:"../assets/img/short.webp", category:"abajo"},
-    {id: 10, name:"Pantalon", price:"30.499", img:"../assets/img/pantalon.jpg", category:"abajo"},
-    {id: 11, name:"Sueter", price:"24.999", img:"../assets/img/sueter.jpg", category:"arriba"},
-    {id: 12, name:"Vestido", price:"29.999", img:"../assets/img/vestido.jpg", category:"arriba"},
-];
+
 
 // CARRITO DE COMPRAS
 
@@ -59,6 +50,10 @@ class Cart {
         // this.cart.push(product);
     };
 
+    guardarCarrito(){
+        localStorage.setItema("carrito", JSON.stringify(this.cart));
+    }
+
     obtenerProductos(){
         return this.cart;
     }
@@ -73,6 +68,29 @@ class Cart {
         return sum;
     };
     
+    incrementarCantidad(id){
+        const index = this.cart.findIndex((product) => product.id == id);
+        if (index !== -1){
+            this.cart[index].stock++;
+        }
+        this.guardarCarrito();
+    };
+    
+    decrementarCantidad(id){
+        const index = this.cart.findIndex((product) => product.id == id);
+        if (index !== -1 && this.cart[index].stock > 1){
+            this.cart[index].stock--;
+        }
+        this.guardarCarrito();
+    };
+    
+    eliminarProductoDelCarrito(id){
+        const index = this.cart.findIndex((product) => product.id == id);
+        if (index !== -1){
+            this.cart.splice(index, 1)
+        }
+        this.guardarCarrito();
+    }  
 }
 const cart = new Cart()
 
@@ -82,6 +100,7 @@ botonCarritoTotal.addEventListener('click', () => {
     sumaTotalCarrito.innerText = cart.obtenerSumaTotal().toFixed(3);
     modal.show()
     compraExitosa();
+    
 })
 
 
@@ -118,14 +137,105 @@ const renderProducts = (list) => {
     botonAddCarrito.forEach(btn => {
         btn.addEventListener("click", agregarCarrito);
     });
-    
-    
 };
+
+
+
+// RENDERIZADO DEL CARRITO
+const renderCart = (list) => {
+    const memoria = JSON.parse(localStorage.getItem("carrito"));
+    modalListProducts.innerHTML = "";
+    list.forEach(product => {
+        const round = (product.price * product.stock).toFixed(3);
+        modalListProducts.innerHTML += //html
+        `
+        <tr>
+            <td>
+                <div class="contenedor-cantidad">
+                    <button class="restarCantidad" id=${product.id}>-</button>
+                    <span class="cantidadProducto" id=${product.id}>${product.stock}</span>
+                    <button class="sumarCantidad" id=${product.id}>+</button>
+                </div>
+            </td>
+            <td>${product.name}</td>
+            <td>$${product.price}</td>
+            <td>$${round}</td>
+            <td>
+            <span class="material-symbols-outlined btn-eliminar" id=${product.id}>cancel</span>
+            </td>
+        </tr>
+        `
+
+        const eliminarProducto = () => {
+            document.querySelectorAll(".btn-eliminar");
+            eliminarProducto.forEach(btn => {
+            btn.addEventListener("click", () => {
+                eliminarProductoDelCarrito();
+            })
+        })
+        } 
+        eliminarProducto();
+    
+       
+        const eliminarProductoDelCarrito = (e) => {
+            const id = e.target.getAttribute("id");
+            console.log(id)
+            cart.eliminarProductoDelCarrito(id);
+            actualizarCarrito();
+        };
+        
+        const incrementarODecrementar = (btn, action) => {
+            const id = btn.getAttribute("id");
+            if (action === "incrementar"){
+                cart.incrementarCantidad(id);
+            }else if (action === "decrementar"){
+                cart.decrementarCantidad(id);
+            }
+            actualizarCarrito()
+        };
+        
+        const actualizarCarrito = () => {
+            renderCart(cart.obtenerProductos());
+            cantidadProducto.innerText = cart.cantidadCarrito();
+            sumaTotalCarrito.innerText = cart.obtenerSumaTotal();
+        };
+
+        eliminarProducto();
+        
+        
+        
+        const restarCantidad = document.querySelectorAll(".restarCantidad");
+        restarCantidad.forEach(btn => {
+            btn.addEventListener("click", () => {
+                incrementarODecrementar(btn, "decrementar")
+            })
+        });
+        
+        const sumarCantidad = document.querySelectorAll(".sumarCantidad");
+        sumarCantidad.forEach(btn => {
+            btn.addEventListener("click", () => {
+                incrementarODecrementar(btn, "incrementar");                 
+            })
+            console.log(product.stock) 
+        });
+        
+       
+    })
+
+                        
+    
+
+    localStorage.setItem("carrito", JSON.stringify(list));
+    // console.log(list)
+}
+
+
+
 
 // FUNCION AGREGAR AL CARRITO
 const agregarCarrito = (e) => {
     const id = e.target.id;
-    const encontrarProducto = catalogo.find( item => item.id == id );
+    const encontrarProducto = listaCatalogo.find( item => item.id == id );
     
     Toastify({
         text: "Producto agregado al carrito",
@@ -135,11 +245,60 @@ const agregarCarrito = (e) => {
         style: {
           background: "linear-gradient(to right, #00b09b, #96c93d)",
         }
-      }).showToast();
+    }).showToast();
 
     cart.agregarCarrito(encontrarProducto);
+   
 };
-renderProducts(catalogo);
+// renderProducts(catalogo);
+
+
+
+
+
+// RENDERIZADO CATEGORIAS
+const renderCategories = (list) => {
+    prodFilter.innerHTML = '';
+    list.forEach( categoria =>{
+        prodFilter.innerHTML += //html 
+        `<option value="${categoria.id}">${categoria.name}</option>`
+    } )
+}
+
+// FILTRO POR CATEGORIAS
+function filterParts(){
+    prodFilter.addEventListener('change', () => {
+        let seleccion = prodFilter.value;
+        if (seleccion == "1"){
+            const nuevoFiltro = listaCatalogo.filter( product => product.category == "arriba");
+        renderProducts(nuevoFiltro);
+        }
+        else if (seleccion == "2"){
+            const nuevoFiltro = listaCatalogo.filter( product => product.category == "abajo");
+        renderProducts(nuevoFiltro);
+        }
+        else if (seleccion == "3"){
+            const filtroCategoria = listaCatalogo.sort( (a, b) => {
+                if(a.price > b.price){return -1};
+                if(a.price < b.price){return 1};
+                return 0;
+            })
+            renderProducts(filtroCategoria);
+        }
+        else if (seleccion == "4"){
+            const filtroCategoria = listaCatalogo.sort( (a, b) => {
+                if(a.price < b.price){return -1};
+                if(a.price > b.price){return 1};
+                return 0;
+            })
+            renderProducts(filtroCategoria);
+        }
+        else{
+            renderProducts(listaCatalogo)
+        }    
+    });
+}
+filterParts();
 
 // FILTRO POR BUSQUEDA MANUAL
 inputFilter.addEventListener('input', (event) => {
@@ -149,65 +308,8 @@ inputFilter.addEventListener('input', (event) => {
     renderProducts(filtro)
 }) 
 
-// FILTRO POR CATEGORIAS
-function filterParts(){
-    prodFilter.addEventListener('change', () => {
-        let seleccion = prodFilter.value;
-        if (seleccion == "1"){
-            const nuevoFiltro = catalogo.filter( product => product.category == "arriba");
-        renderProducts(nuevoFiltro);
-        }
-        else if (seleccion == "2"){
-            const nuevoFiltro = catalogo.filter( product => product.category == "abajo");
-        renderProducts(nuevoFiltro);
-        }
-        else if (seleccion == "3"){
-            const filtroCategoria = catalogo.sort( (a, b) => {
-                if(a.price > b.price){return -1};
-                if(a.price < b.price){return 1};
-                return 0;
-            })
-            renderProducts(filtroCategoria);
-        }
-        else if (seleccion == "4"){
-            const filtroCategoria = catalogo.sort( (a, b) => {
-                if(a.price < b.price){return -1};
-                if(a.price > b.price){return 1};
-                return 0;
-            })
-            renderProducts(filtroCategoria);
-        }
-        else{
-            renderProducts(catalogo)
-        }    
-    });
-}
-filterParts();
 
-// RENDERIZADO DEL CARRITO
-const renderCart = (list) => {
-    modalListProducts.innerHTML = "";
-    list.forEach(product => {
-        const round = (product.price * product.stock).toFixed(3);
-        modalListProducts.innerHTML += //html
-        `
-        <tr>
-            <td>${product.stock}</td>
-            <td>${product.name}</td>
-            <td>$${product.price}</td>
-            <td>$${round}</td>
-            <td>
-            <button><span class="material-symbols-outlined user-btn-close" id="btn-eliminar">cancel</span></button>
-            </td>
-        </tr>
-        `
-    })
-}
 
-// ELIMINAR PRODUCTO DEL CARRITO
-// botonEliminar.addEventListener("click", () => { 
-
-// })
 
 // BOTON FINALIZAR COMPRA
 const compraExitosa = () => {
@@ -218,8 +320,8 @@ const compraExitosa = () => {
             title: "Tu compra ha sido aprobada. ¡Muchas gracias!",
             showConfirmButton: false,
             timer: 2000
-          });
-          modal.hide();
+        });
+        modal.hide();
     })
 }
 
@@ -227,23 +329,34 @@ const compraExitosa = () => {
 
 
 
+// FETCH Y AJAX
+const obtenerCatalogo = async () => {
+    try {
+       const endPoint = '../js/info.json';  //aca va la url real ej: http://blabla
+       const resp = await fetch(endPoint);
+       const json = await resp.json()
 
+       const products = json.catalogo;
+       const categories = json.categorias;
+       listaCatalogo = products;
+       
+       renderProducts(products);
+       renderCategories(categories);
 
+    } catch (error) {
+        Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "¡Ocurrió un error!",
+            showConfirmButton: true,
+            // timer: 2000
+        });
+        console.log("fetch no ha respondido correctamente")
+    }
+    
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+obtenerCatalogo();
 
 
 

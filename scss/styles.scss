@@ -334,6 +334,34 @@ html{
         opacity: 0.2;
     }
 }
+.modal{
+    font-family: $font-principal;
+    font-size: 1.25rem;
+
+    .contenedor-cantidad{
+        padding-left: 5px;
+        width: fit-content;
+
+        .sumarCantidad, .restarCantidad{
+            width: 20px;
+            border-color: rgba(0, 0, 0, 0.187);
+            background-color: white;
+        }
+        
+    }
+
+    .btn-eliminar{
+        cursor: pointer;
+    }
+
+    .compra-total{
+        font-weight: 700;
+        position: relative;
+        left: 70%;
+
+    }
+}
+
 //FIN DE HEADER//
 
 //INICIO MAIN//
